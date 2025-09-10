@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Chained Selector</title>
+  <style>
+    /* Single class */
+    .btn {
+      padding: 10px 20px;
+      border: 2px solid black;
+      background: lightgray;
+    }
+
+    /* Chained classes */
+    .btn.primary {
+      background: blue;
+      color: white;
+      border-color: darkblue;
+    }
+
+    /* Chained ID + class */
+    #special.btn {
+      font-weight: bold;
+      border-radius: 50px;
+    }
+
+  </style>
+</head>
+<body>
+  <button class="btn">Normal Button</button>
+  <button class="btn primary">Primary Button</button>
+  <button id="special" class="btn primary">Special Button</button>
+</body>
+</html>
