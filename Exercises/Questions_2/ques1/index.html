@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CSS Specificity & Selector Practice</title>
+
+  <!-- === TODOs Based on Position (Inline > Internal > External) === -->
+  <!-- TODO 1: Apply color: red using inline style to <p> inside #special-box -->
+  <!-- TODO 2: Apply color: green using internal style to same <p> inside #special-box and see if it overrides inline -->
+  <!-- TODO 3: Apply color: blue using external style to same <p> inside #special-box and test specificity -->
+
+  <!-- === TODOs Based on Selector Type === -->
+  <!-- TODO 4: Apply font-size: 24px using element selector on all <p> tags -->
+  <!-- TODO 5: Apply font-size: 28px using class selector on .para elements in #section-one -->
+  <!-- TODO 6: Apply font-size: 32px using ID selector on #section-one -->
+  <!-- TODO 7: Apply font-size: 36px using attribute selector for input[type="text"] -->
+
+  <!-- === TODOs Based on Importance === -->
+  <!-- TODO 8: Apply background-color: orange using class selector with !important on .footer-note -->
+  <!-- TODO 9: Apply background-color: black using ID selector on #copyright and see if it overrides class with !important -->
+  <!-- TODO 10: Use inline style for background-color: gray on #copyright and test against others -->
+
+</head>
+<body>
+  <header style="background-color: lightgray;">
+    <h1 class="main-title">Main Site Header</h1>
+    <div class="container">
+      <div class="wrapper" id="special-box">
+        <p class="intro">This section is inside a special information box meant to be highlighted using ID selector.</p>
+        <div class="info-box">
+          <p>This paragraph is inside a secondary info box nested within the special box.</p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="content">
+      <div class="section" id="section-one">
+        <h2>Section One</h2>
+        <p class="para">This paragraph explains how basic class selectors work and is part of section one.</p>
+        <p class="para">This paragraph continues explaining class-based selection and styling.</p>
+        <div>
+          <p class="nested-para">This is a nested paragraph showing how descendant selectors can affect inner elements.</p>
+        </div>
+      </div>
+
+      <div class="section" id="section-two">
+        <h2>Section Two</h2>
+        <p class="para">This paragraph talks about the importance of CSS specificity in larger projects.</p>
+        <p class="para" style="background-color: yellow;">This one uses inline styling directly applied via HTML, but may be overridden!</p>
+        <input type="text" value="Enter your name here" />
+        <div class="nested-section">
+          <p class="deep">Deeply nested content used to demonstrate chaining selectors and their reach.</p>
+        </div>
+      </div>
+
+      <div id="mix-box" class="mix">
+        <p class="combo">This is the test paragraph for mixed specificity. Target this in TODO 16.</p>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-container">
+      <p class="footer-note" id="copyright">
+        This is the footer of the page. It demonstrates footer styling, specificity by ID and class.
+      </p>
+    </div>
+  </footer>
+</body>
+</html>

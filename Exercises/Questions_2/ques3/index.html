@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chained CSS Selectors</title>
+
+  <!-- TODOs for Chained Selector Practice -->
+  <!-- TODO 1: Apply color blue to the div with both 'box' and 'theme' classes -->
+  <!-- TODO 2: Make the text bold and red for the p with id 'msg' and classes 'note' and 'important'  -->
+  <!-- TODO 3: Apply lightyellow background to div with classes 'info box' and attribute data-role='content' -->
+  <!-- TODO 4: Apply green text color to direct child p with class 'note' inside div with class 'box footer'  -->
+  <!-- TODO 5: Apply lightblue background to p with class 'desc' inside #sidebar which also has class 'box' -->
+ <style>
+ </style>
+
+</head>
+<body>
+  <div class="wrapper">
+    <div id="main" class="box theme">
+        i am theme box
+      <h2 class="heading special">Main Title</h2>
+      <p class="desc highlight">This is a highlighted description.</p>
+
+      <div class="info box" data-role="content">
+        i am info-box
+        <p class="note important" id="msg">Important note</p>
+        <p class="note" id="msg">Just a note</p>
+      </div>
+
+      <div class="box footer">
+        <p class="text note">Footer note</p>
+      </div>
+    </div>
+   
+    <div class="box secondary" id="sidebar">
+        I am secondary box
+      <h2 class="heading">Sidebar Title</h2>
+   
+      <p class="desc">Sidebar description.</p>
+      <ol class="desc">
+        <li>item 1</li>
+        <li>item 2</li>
+      </ol>
+
+    </div>
+  </div>
+</body>
+</html>

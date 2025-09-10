@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CSS Selector Practice</title>
+  <link rel="stylesheet" href="style.css">
+
+  <!-- TODO 1: Apply color: red to all h2 and p elements using a grouped selector (h2, p) -->
+  <!-- TODO 2: Apply font-weight: bold to the first <p> directly after #box1 using adjacent sibling selector -->
+  <!-- TODO 3: Apply background-color: lightblue to all <p> siblings after .group1 using general sibling selector -->
+  <!-- TODO 4: Apply font-size: 22px to all paragraphs inside .group2 using descendant selector -->
+  <!-- TODO 5: Apply color: orange to direct <h3> children of #outer1 using the > selector -->
+  <!-- TODO 6: Apply background-color: beige to the second-level nested div inside #outer1 using chaining selector -->
+  <!-- TODO 7: Apply font-style: italic to .group3 .inner3 p using chaining to target deeply nested elements -->
+  <!-- TODO 8: Apply color: green to all elements that are inside .combo1 using space selector -->
+  <!-- TODO 9: Apply font-weight: bold to direct <p> children of .combo2 using > selector -->
+  <!-- TODO 10: Apply background-color: pink to the next sibling of #header1 using + selector -->
+  <!-- TODO 11: Apply background-color: lightgreen to all siblings after #header2 using ~ selector -->
+
+</head>
+<body>
+
+  <div id="box1">
+    <h2>Heading inside box1</h2>
+    <p>Paragraph 1 in box1</p>
+    <p>Paragraph 2 in box1</p>
+  </div>
+
+  <p>This paragraph is outside box1 but comes right after</p>
+
+  <div class="group1">
+    <p>Group1 paragraph 1</p>
+    <p>Group1 paragraph 2</p>
+  </div>
+
+  <p>This paragraph is a sibling after group1</p>
+  <p>Another sibling paragraph after group1</p>
+
+  <div class="group2">
+    <h2>Heading in group2</h2>
+    <div>
+      <p>Nested paragraph 1 in group2</p>
+      <p>Nested paragraph 2 in group2</p>
+    </div>
+  </div>
+
+  <div id="outer1">
+    <h3>Direct heading in outer1</h3>
+    <div>
+      <h3>Nested heading not direct in outer1</h3>
+    </div>
+    <div>
+      <div class="nested-box">
+        <p>This is a deep nested paragraph</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="group3">
+    <div class="inner3">
+      <h4>Deep Nested Title</h4>
+      <p>Deep nested paragraph</p>
+    </div>
+  </div>
+
+  <div class="combo1">
+    <h2>Combo Heading</h2>
+    <p>Combo Paragraph</p>
+    <div>
+      <p>Nested paragraph in combo</p>
+    </div>
+  </div>
+
+  <div class="combo2">
+    <p>Direct child paragraph in combo2</p>
+    <div>
+      <p>Nested paragraph in combo2</p>
+    </div>
+  </div>
+
+  <h2 id="header1">I am header1</h2>
+  <p>Paragraph after header1</p>
+
+  <h2 id="header2">I am header2</h2>
+  <p>First sibling after header2</p>
+  <p>Second sibling after header2</p>
+
+</body>
+</html>
