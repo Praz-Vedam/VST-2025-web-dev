@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CSS Positioning Practice – TODOs</title>
+
+  <style>
+    /* TODO 1: .relative → position: relative; top: 20px; left: 30px; background-color: lightcoral; padding: 20px; */
+    /* TODO 2: .absolute-container → position: relative; width: 300px; height: 200px; background-color: lightblue; */
+    /* TODO 2a: .absolute (inside .absolute-container) → position: absolute; top: 10px; left: 15px; background-color: lightgreen; padding: 10px; */
+    /* TODO 3: .fixed → position: fixed; top: 0; right: 0; width: 100%; background-color: darkblue; color: white; padding: 10px; */
+    /* TODO 4: .sticky → position: sticky; top: 0; background-color: lightyellow; padding: 20px; */
+    /* TODO 5: .parent → position: relative; background-color: lightgray; padding: 20px; */
+    /* TODO 5a: .child (inside .parent) → position: relative; margin: 5px; background-color: lightgreen; padding: 10px; */
+    /* TODO 6: #box1 → position: absolute; top: 50px; left: 50px; width: 150px; height: 100px; background-color: peachpuff; */
+    /* TODO 7: #box2 → position: relative; top: -10px; left: -20px; width: 120px; height: 80px; background-color: palegoldenrod; padding: 5px; */
+    /* TODO 8: #box3 → position: fixed; bottom: 10px; left: 10px; width: 100px; height: 50px; background-color: lightseagreen; */
+    /* TODO 9: #box4 → position: sticky; top: 100px; background-color: lightpink; padding: 15px; */
+    /* TODO 10: #box5 → position: relative; top: 30px; right: 30px; width: 180px; height: 120px; background-color: lavender; border: 2px solid purple; */
+  </style>
+
+</head>
+<body>
+
+  <h1>CSS Positioning Practice – With TODOs</h1>
+
+  <div class="relative">
+    <h2>TODO 1: Relative Position</h2>
+    <p>Move me 20px down and 30px right from my normal position.</p>
+  </div>
+
+  <div class="absolute-container">
+    <h2>TODO 2: Absolute Container</h2>
+    <p>This container is the reference for the absolutely positioned box below.</p>
+    <div class="absolute">
+      <h3>TODO 2a: Absolute Position</h3>
+      <p>I'm 10px from the top and 15px from the left of my container.</p>
+    </div>
+  </div>
+
+  <div class="fixed">
+    <h2>TODO 3: Fixed Position</h2>
+    <p>I stick to the top-right of the viewport even when you scroll.</p>
+  </div>
+
+  <div class="sticky">
+    <h2>TODO 4: Sticky Position</h2>
+    <p>I will stick to the top of the page once I reach it on scroll.</p>
+  </div>
+
+  <div class="parent">
+    <h2>TODO 5: Parent Relative</h2>
+    <div class="child">
+      <h3>TODO 5a: Child Inside Parent</h3>
+      <p>I’m positioned relative and spaced inside my parent.</p>
+    </div>
+    <div class="child">
+      <p>Another child with the same styling.</p>
+    </div>
+  </div>
+
+  <div id="box1">
+    <h2>TODO 6: Absolute Outside Container</h2>
+    <p>I’m absolutely positioned 50px down and 50px right from the viewport.</p>
+  </div>
+
+  <div id="box2">
+    <h2>TODO 7: Relative Negative Offset</h2>
+    <p>I’m moved -10px up and -20px left relative to my normal spot.</p>
+  </div>
+
+  <div id="box3">
+    <h2>TODO 8: Fixed Bottom-Left</h2>
+    <p>I stick to the bottom-left corner of the viewport.</p>
+  </div>
+
+  <div id="box4">
+    <h2>TODO 9: Sticky Mid-Page</h2>
+    <p>I stick when I reach 100px from the top.</p>
+  </div>
+
+  <div id="box5">
+    <h2>TODO 10: Relative with Border</h2>
+    <p>I’m moved 30px down and 30px left with a purple border.</p>
+  </div>
+
+  <p style="height: 1500px;">Scroll to test fixed and sticky positions.</p>
+</body>
+</html>

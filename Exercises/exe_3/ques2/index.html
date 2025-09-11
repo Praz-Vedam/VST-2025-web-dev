@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Display Property Practice</title>
+
+  <style>
+    /* Write your CSS here based on the TODOs below */
+  </style>
+
+  <!-- 
+    TODO 1: Make the element with id="box1" hidden by setting its display to none.
+    
+    TODO 2: Make the element with id="box2" behave like a block-level element.
+    
+    TODO 3: Make the span inside id="box3" behave like inline-block (give it width and height).
+    
+    TODO 4: Make the paragraph inside id="box4" behave like an inline element.
+    
+    TODO 5: Make both divs inside id="container1" inline-block and give them fixed width and height so they sit side-by-side.
+    
+    TODO 6: Using media query (max-width: 600px), hide the element with id="mobile-hide" by setting display to none.
+    
+    TODO 7: Using media query (min-width: 601px), change the display of the element with id="tablet-view" to inline-block.
+    
+    TODO 8: Make the h2 inside id="title-section" behave like a block element (even though h2 is already block, make it clear in CSS).
+    
+    TODO 9: Make all <span> inside id="inline-text" behave like block elements on small screens (max-width: 500px).
+    
+    TODO 10: Make the div with id="special-box" display inline-block and set width: 200px and height: 100px to see difference clearly.
+  -->
+</head>
+
+<body>
+  <h1>Display Property Practice</h1>
+
+  <div id="box1">I am Box 1 (Should be hidden)</div>
+
+  <div id="box2">I am Box 2 (Should behave like a block element)</div>
+
+  <div id="box3">
+    <span>I am a span inside Box 3 (Should behave like inline-block)</span>
+  </div>
+
+  <div id="box4">
+    <p>I am a paragraph inside Box 4 (Should behave like inline)</p>
+  </div>
+
+  <div id="container1">
+    <div style="background-color: lightcoral;">First box</div>
+    <div style="background-color: lightseagreen;">Second box</div>
+  </div>
+
+  <div id="mobile-hide">I should hide on Mobile (Screen width <= 600px)</div>
+
+  <div id="tablet-view">I should become inline-block on Tablet (Screen width >= 601px)</div>
+
+  <div id="title-section">
+    <h2>I am a title inside title-section (Force block style)</h2>
+  </div>
+
+  <div id="inline-text">
+    <span>Span 1 inside Inline Text</span>
+    <span>Span 2 inside Inline Text</span>
+    <span>Span 3 inside Inline Text</span>
+  </div>
+
+  <div id="special-box" style="background-color: peachpuff;">I am a special box (should be inline-block)</div>
+
+</body>
+</html>
