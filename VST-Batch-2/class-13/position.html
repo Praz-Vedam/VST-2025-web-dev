@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Position</title>
+
+    <style>
+      .box {
+        height: 250px;
+        width: 200px;
+        border: 3px solid black;
+        background-color: aquamarine;
+      }
+
+      .static {
+        position: static;
+      }
+
+      .relative {
+        position: relative;
+        background-color: brown;
+        left: 400px;
+        /* top: 50px; */
+      }
+
+      .absolute {
+        position: absolute;
+        top: 20px;
+        left: 300px;
+      }
+      .absolute1 {
+        position: absolute;
+        top: 0px;
+        left: 20px;
+      }
+
+      .fixed {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+      }
+
+      .sticky {
+        position: sticky;
+        top: 200px;
+        background-color: chocolate;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box static">I am a static box</div>
+    <div class="box relative">I am a relative box</div>
+    <div class="box absolute">I am a absolute box</div>
+
+    <div class="box relative">
+      <div
+        class="box absolute1"
+        style="background-color: blue; height: 40px; width: 40px"
+      >
+        I am a absolute box
+      </div>
+    </div>
+    <div class="box fixed">I am a fixed box </div>
+    <div class="box sticky">I am a sticky box 5</div>
+        <div class="box static">I am a static box</div>
+    <div class="box static">I am a static box</div>
+    <div class="box static">I am a static box</div>
+    <div class="box static">I am a static box</div>
+    <div class="box static">I am a static box</div>
+    <div class="box static">I am a static box</div>
+
+  </body>
+</html>
