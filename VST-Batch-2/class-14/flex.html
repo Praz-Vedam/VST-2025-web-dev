@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flex</title>
+    <style>
+      .flex-container {
+        display: flex;
+        flex-direction: row;
+        border: 5px solid red;
+        justify-content: space-between;
+        height: 150px;
+        align-items: flex-start;
+      }
+      .flex-item {
+        flex-basis: 130px;
+      }
+
+      .item4 {
+        align-self: flex-end;
+        order:3;
+        flex-grow: 2;
+      }
+
+      .item3 {
+        order:4
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Flexbox Playground</h1>
+
+    <!-- Main Flex Parent -->
+    <div class="flex-container">
+      <!-- Child Items -->
+      <div class="flex-item item1" style="background-color: lightcoral">
+        I am divblock
+      </div>
+      <div class="flex-item item2" style="background-color: lightblue">
+        Item 2
+      </div>
+      <div class="flex-item item3" style="background-color: lightgreen">
+        Item 3
+      </div>
+      <div class="flex-item item4" style="background-color: lightpink">
+        I am paragraph 4
+      </div>
+      <div class="flex-item item5" style="background-color: lightseagreen">
+        I am paragraph 5
+      </div>
+      <div class="flex-item item5" style="background-color: blue">Item 6</div>
+      <div class="flex-item item5" style="background-color: lightseagreen">
+        I am paragraph 7
+      </div>
+      <div class="flex-item item5" style="background-color: chartreuse">
+        I am paragraph 8
+      </div>
+      <div class="flex-item item5" style="background-color: lightseagreen">
+        I am paragraph 9
+      </div>
+    </div>
+  </body>
+</html>
