@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      body {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      .box {
+        height: 200px;
+        background-color: aqua;
+        text-align: center;
+        font-size: 32px;
+      }
+      @media (max-width: 600px) {
+        .box {
+          background-color: lightcoral;
+          font-size: 14px;
+        }
+      }
+
+      @media (min-width: 601px) and (max-width: 1024px) {
+        .box {
+          background-color: yellowgreen;
+          font-size: 20px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">Change screen-size to test media queries</div>
+  </body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Navbar</title>
+    <style>
+      body {
+        color: white;
+        font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+          "Lucida Sans", Arial, sans-serif;
+      }
+      .bg {
+        background-color: rgb(129, 107, 107);
+        padding: 10px 16px;
+      }
+      .nav {
+        background-color: black;
+        border-radius: 24px;
+        display: flex;
+        justify-content: space-between;
+        padding: 16px;
+        align-items: center;
+      }
+
+      .links {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+        align-items: center;
+      }
+
+      .logo {
+        font-size: 24px;
+        font-weight: 700;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      a {
+        text-decoration: none;
+        color: grey;
+      }
+
+      a:hover {
+        color: white;
+      }
+
+      .signup {
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+      }
+      .button {
+        padding: 6px 12px;
+        background-color: orangered;
+        border-radius: 24px;
+        border: none;
+        color: white;
+        font-weight: 500;
+        font-size: 14px;
+      }
+
+      .button:hover {
+        background-color: rgb(188, 52, 2);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="bg">
+      <div class="nav">
+        <div class="links">
+          <a href="#">What's Included</a><a href="#">Stories</a
+          ><a href="#">Our Why</a><a href="#">FAQs</a>
+        </div>
+        <div class="logo">superpower</div>
+        <div class="signup">
+          <a class="login">Login</a>
+          <button class="button">Start testing</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

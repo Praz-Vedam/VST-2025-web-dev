@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pseudo</title>
+
+    <style>
+      a {
+        text-decoration: none;
+        color: black;
+      }
+
+      a:hover {
+        text-decoration: underline;
+        color: red;
+      }
+
+      li:first-child {
+        color: green;
+      }
+      li:last-child {
+        color: red;
+      }
+      li:nth-child(2) {
+        color: blue;
+      }
+
+      li {
+        color: blueviolet;
+      }
+
+      p::first-letter {
+        font-size: 28px;
+        color: purple;
+      }
+
+      p::after {
+        content: "@";
+      }
+
+      
+    </style>
+  </head>
+  <body>
+    <h1>Pseudo Selectors Demo</h1>
+    <p>This is a paragraph to demonstrate pseudo-elements.</p>
+
+    <a href="#">Hover over me</a>
+
+    <ul>
+      <li>First item</li>
+      <li>Second item</li>
+      <li>Third item</li>
+      <li>Fourth item</li>
+    </ul>
+
+    <p>This is a paragraph to demonstrate pseudo-elements.</p>
+  </body>
+</html>

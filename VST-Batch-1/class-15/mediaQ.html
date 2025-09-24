@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Media</title>
+    <style>
+      p {
+        background-color: aqua;
+        height: 200px;
+        text-align: center;
+        padding-top: 50px;
+        color: white;
+      }
+      @media (max-width: 600px) {
+        p {
+          background-color: greenyellow;
+        }
+      }
+
+      @media (min-width: 601px) and (max-width: 1024px) {
+        p {
+          background-color: brown;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <p>Adjust screen size and see the changes in background color</p>
+  </body>
+</html>
