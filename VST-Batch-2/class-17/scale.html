@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scale</title>
+    <style>
+      body {
+        margin: 0;
+        box-sizing: border-box;
+        display: flex;
+        height: 100vh;
+        justify-content: space-evenly;
+        align-items: center;
+      }
+
+      .box {
+        height: 150px;
+        width: 150px;
+        transition-duration: 2s;
+      }
+
+      .one {
+        background-color: blue;
+      }
+      .two {
+        background-color: brown;
+      }
+      .three {
+        background-color: green;
+      }
+      .one:hover {
+        transform: scaleX(150%);
+      }
+      .two:hover {
+        transform: scaleY(50%);
+      }
+      .three:hover {
+        transform: scale(1.5);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box one"></div>
+    <div class="box two"></div>
+    <div class="box three"></div>
+  </body>
+</html>

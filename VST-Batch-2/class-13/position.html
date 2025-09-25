@@ -21,7 +21,6 @@
         position: relative;
         background-color: brown;
         left: 400px;
-        /* top: 50px; */
       }
 
       .absolute {
@@ -50,8 +49,8 @@
   </head>
   <body>
     <div class="box static">I am a static box</div>
-    <div class="box relative">I am a relative box</div>
-    <div class="box absolute">I am a absolute box</div>
+    <div class="box relative" style="z-index: 20">I am a relative box 1</div>
+    <div class="box relative" style="top: -50px;left:420px;background-color: pink;z-index: 100">I am a rel-2 box</div>
 
     <div class="box relative">
       <div
@@ -61,14 +60,13 @@
         I am a absolute box
       </div>
     </div>
-    <div class="box fixed">I am a fixed box </div>
+    <div class="box fixed">I am a fixed box</div>
     <div class="box sticky">I am a sticky box 5</div>
-        <div class="box static">I am a static box</div>
     <div class="box static">I am a static box</div>
     <div class="box static">I am a static box</div>
     <div class="box static">I am a static box</div>
     <div class="box static">I am a static box</div>
     <div class="box static">I am a static box</div>
-
+    <div class="box static">I am a static box</div>
   </body>
 </html>
