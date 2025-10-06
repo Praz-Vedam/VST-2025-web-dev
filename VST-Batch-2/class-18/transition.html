@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Transition</title>
+
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      .box {
+        height: 200px;
+        width: 200px;
+      }
+
+      .one {
+        background-color: blue;
+        transition-duration: 4s;
+        transition-timing-function: linear;
+      }
+      .two {
+        background-color: pink;
+        transition-duration: 2s;
+        /* transition-property: width, transform; */
+        transition-delay: 1s;
+        transition-timing-function: cubic-bezier(0.42, 0, 0.58, 1);
+      }
+      .three {
+        background-color: green;
+        transition-duration: 3s;
+      }
+
+      .one:hover {
+        width: 100vw;
+        background-color: brown;
+      }
+      .two:hover {
+        width: 50vw;
+        background-color: slategray;
+        transform: rotate(30deg);
+      }
+      .three:hover {
+        width: 70vw;
+        background-color: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box one"></div>
+    <div class="box two"></div>
+    <div class="box three"></div>
+  </body>
+</html>
