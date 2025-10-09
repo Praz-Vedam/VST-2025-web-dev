@@ -15,57 +15,58 @@
     /* ========== 1. Basic Color Transition ========== */
     .color {
       /* Q1: Add a 2s transition for background color */
-      
+      transition: background-color 2s;
     }
 
     .color:hover {
       /* Q2: Change background to lightgreen */
-      
+      background-color: lightgreen;
     }
 
     /* ========== 2. Smooth Width Change ========== */
     .width {
       /* Q3: Add a transition of 1.5s for width */
-      
+      transition: width 1.5s;
     }
 
     .width:hover {
       /* Q4: Double the width */
-      
+      width: 200px;
     }
 
     /* ========== 3. Transition Multiple Properties ========== */
     .multi {
       /* Q5: Transition background and width (1s each) */
-      
+      transition: background-color 1s, width 1s;
     }
 
     .multi:hover {
       /* Q6: Change background to blue and make width 200px */
-      
+      background-color: blue;
+      width: 200px;
     }
 
     /* ========== 4. Transition with Transform ========== */
     .move {
       /* Q7: Add a 1s transition for transform */
-      
+      transition: transform 1s;
     }
 
     .move:hover {
       /* Q8: Move the box 50px right and rotate 30deg */
-      
+      transform: translateX(50px) rotate(30deg);
     }
 
     /* ========== 5. Timing Function Practice ========== */
     .timing {
       background: gold;
       /* Q9: Add transition for width (2s) with ease-in-out */
-      
+      transition: width 2s ease-in-out;
     }
 
     .timing:hover {
       /* Q10: Increase width to 200px */
-      
+      width: 200px;
     }
 
     /* ========== 6. Delayed Transition ========== */
@@ -73,12 +74,12 @@
       background: violet;
       /* Q11: Add a background-color transition (2s) 
               that starts after 1s delay */
-      
+      transition: background-color 2s ease 1s;
     }
 
     .delay:hover {
       /* Q12: Change background to cyan */
-      
+      background-color: cyan;
     }
   </style>
 </head>
