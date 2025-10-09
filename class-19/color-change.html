@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Color-change</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .box {
+        height: 100px;
+        width: 100px;
+        animation-name: color-change;
+        animation-duration: 2s;
+        animation-iteration-count: 2;
+        animation-fill-mode: forwards;
+      }
+
+      @keyframes color-change {
+        0% {
+          background-color: aqua;
+        }
+
+        25% {
+          background-color: red;
+        }
+        50% {
+          background-color: green;
+        }
+
+        75% {
+          background-color: pink;
+        }
+        100% {
+          background-color: blue;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box"></div>
+  </body>
+</html>
