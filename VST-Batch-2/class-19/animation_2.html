@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Animation-2</title>
+
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .container {
+        width: 500px;
+        height: 500px;
+        background-color: slategray;
+        position: relative;
+        animation: rotate-bg 4s linear infinite alternate;
+      }
+
+      .box {
+        width: 100px;
+        height: 100px;
+        background-color: hotpink;
+        border: 3px solid black;
+        position: absolute;
+        top: 0;
+        left: 0;
+        animation-name: box-mover;
+        animation-duration: 4s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+      }
+
+      @keyframes rotate-bg {
+        to {
+            transform: rotate(-360deg);
+        }
+        50% {
+            opacity: 0.1;
+        }
+      }
+
+      @keyframes box-mover {
+        0% {
+          top: 0%;
+          left: 0%;
+        }
+        33% {
+          top: 100%;
+          left: 0%;
+          transform: translateY(-100%);
+        }
+
+        50% {
+          border-radius: 50%;
+        }
+
+        66% {
+          top: 100%;
+          left: 100%;
+          transform: translate(-100%, -100%);
+        }
+        100% {
+          top: 0%;
+          left: 100%;
+          transform: translateX(-100%);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box"></div>
+    </div>
+  </body>
+</html>

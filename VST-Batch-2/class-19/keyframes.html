@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Keyframes</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+
+      .ball {
+        height: 100px;
+        width: 100px;
+        background-color: #ff6347;
+        border-radius: 50%;
+        animation-name: bounce; /* WHich animation*/
+        animation-duration: 2s; /* How long the  animation should run*/
+        animation-iteration-count: 1; /* Keep looping! */
+      }
+      @keyframes bounce {
+        0% {
+          transform: translateY(0);
+        }
+
+        50% {
+          transform: translateY(-100px);
+        }
+        100% {
+          transform: translateY(-50px);
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Css Animations - bouncing ball -</h1>
+    <div>
+      <div class="ball"></div>
+      <hr />
+    </div>
+  </body>
+</html>
