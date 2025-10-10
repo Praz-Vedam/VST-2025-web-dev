@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CSS Motions Worksheet</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f7f7f7;
+      padding: 20px;
+      color: #333;
+    }
+
+    .section {
+      border: 2px solid #ddd;
+      border-radius: 12px;
+      background: white;
+      padding: 15px;
+      margin-bottom: 30px;
+    }
+
+    h1, h2 {
+      color: #222;
+    }
+
+    .box {
+      width: 100px;
+      height: 100px;
+      margin: 20px;
+      background: lightcoral;
+      display: inline-block;
+      transition: all 1s ease; /* Default transition for hover tests */
+    }
+
+    /* =========================================================
+       🔹 PART 1: TRANSFORMS
+       ========================================================= */
+    .translate:hover {
+      /* Q1: Move 60px right and 20px down */
+      /* transform: ________; */
+    }
+
+    .rotate:hover {
+      /* Q2: Rotate 45 degrees clockwise */
+      /* transform: ________; */
+    }
+
+    .scale:hover {
+      /* Q3: Make 1.5x bigger */
+      /* transform: ________; */
+    }
+
+    .skew:hover {
+      /* Q4: Tilt 20deg horizontally */
+      /* transform: ________; */
+    }
+
+    /* =========================================================
+       🔹 PART 2: TRANSITIONS
+       ========================================================= */
+    .colorTransition {
+      background: tomato;
+      /* Q5: Add transition to change background smoothly (2s) */
+      /* transition: ________; */
+    }
+
+    .colorTransition:hover {
+      /* Q6: Change background color to lightgreen */
+      /* background: ________; */
+    }
+
+    .moveTransition {
+      /* Q7: Smoothly move right and rotate using transition */
+      /* transition: ________; */
+    }
+
+    .moveTransition:hover {
+      /* Q8: Use transform to move 100px right + rotate 30deg */
+      /* transform: ________; */
+    }
+
+    .timing {
+      background: gold;
+      /* Q9: Apply a 2s transition with ease-in-out */
+      /* transition: ________; */
+    }
+
+    .timing:hover {
+      /* Q10: Increase width to 200px */
+      /* width: ________; */
+    }
+
+    /* =========================================================
+       🔹 PART 3: ANIMATIONS
+       ========================================================= */
+    .bounce {
+      /* Q11: Add animation called "bounceBox" lasting 2s infinitely */
+      /* animation: ________; */
+    }
+
+    /* Q12: Define bounce movement (up & down using translateY) */
+    @keyframes bounceBox {
+      0% { transform: translateY(0); }
+      50% {  }
+      100% {  }
+    }
+
+    .colorLoop {
+      /* Q13: Animate color change in 4s infinitely */
+      /* animation: ________; */
+    }
+
+    /* Q14: Color transition sequence red → orange → yellow → green → blue */
+    @keyframes colorLoop {
+      
+    }
+
+    .rotateMove {
+      background: skyblue;
+      /* Q15: Animate "rotateMove" (3s, infinite, ease-in-out) */
+      /* animation: ________; */
+    }
+
+    /* Q16: Move 150px right + rotate 360deg */
+    @keyframes rotateMove {
+      
+    }
+
+    .fadeGrow {
+      background: lightgreen;
+      /* Q17: Animate "fadeGrow" for 3s only once */
+      /* animation: ________; */
+    }
+
+    /* Q18: Fade in + grow using opacity and scale */
+    @keyframes fadeGrow {
+      
+    }
+
+    .delay {
+      background: violet;
+      /* Q19: Animate color fade (3s) with 2s delay */
+      /* animation: ________; */
+    }
+
+    /* Q20: Violet → cyan fade */
+    @keyframes fadeColor {
+      
+    }
+
+    .alternate {
+      background: orange;
+      /* Q21: Animate slide (2s, infinite, alternate direction) */
+      /* animation: ________; */
+    }
+
+    /* Q22: Move left → right → left */
+    @keyframes slide {
+      
+    }
+
+    .fillMode {
+      background: salmon;
+      /* Q23: Animate stretch (2s, once, forwards) */
+      /* animation: ________; */
+    }
+
+    /* Q24: Stretch width from 100px → 200px */
+    @keyframes stretch {
+      
+    }
+
+    .combo {
+      background: lightblue;
+      /* Q25: Animate multiple properties: move, rotate, color (5s, infinite) */
+      /* animation: ________; */
+    }
+
+    /* Q26: Combine movement + rotation + color change */
+    @keyframes combo {
+      
+    }
+  </style>
+</head>
+<body>
+  <h1>🎨 CSS Motion Worksheet</h1>
+  <p><strong>Goal:</strong> Practice <em>Transforms</em>, <em>Transitions</em>, and <em>Animations</em> to make elements move, react, and come alive!</p>
+
+  <div class="section">
+    <h2>Part 1: Transforms</h2>
+    <div class="box translate"></div>
+    <div class="box rotate"></div>
+    <div class="box scale"></div>
+    <div class="box skew"></div>
+  </div>
+
+  <div class="section">
+    <h2>Part 2: Transitions</h2>
+    <div class="box colorTransition"></div>
+    <div class="box moveTransition"></div>
+    <div class="box timing"></div>
+  </div>
+
+  <div class="section">
+    <h2>Part 3: Animations</h2>
+    <div class="box bounce"></div>
+    <div class="box colorLoop"></div>
+    <div class="box rotateMove"></div>
+    <div class="box fadeGrow"></div>
+    <div class="box delay"></div>
+    <div class="box alternate"></div>
+    <div class="box fillMode"></div>
+    <div class="box combo"></div>
+  </div>
+</body>
+</html>
