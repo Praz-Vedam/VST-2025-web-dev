@@ -36,21 +36,25 @@
        🔹 PART 1: TRANSFORMS
        ========================================================= */
     .translate:hover {
+      transform: translate(60px, 20px);
       /* Q1: Move 60px right and 20px down */
       /* transform: ________; */
     }
 
     .rotate:hover {
+      transform: rotate(45deg);
       /* Q2: Rotate 45 degrees clockwise */
       /* transform: ________; */
     }
 
     .scale:hover {
+      transform: scale(1.5);
       /* Q3: Make 1.5x bigger */
       /* transform: ________; */
     }
 
     .skew:hover {
+      transform: skew(20deg, 0);
       /* Q4: Tilt 20deg horizontally */
       /* transform: ________; */
     }
@@ -59,33 +63,40 @@
        🔹 PART 2: TRANSITIONS
        ========================================================= */
     .colorTransition {
+      transition-duration: 2s;
       background: tomato;
       /* Q5: Add transition to change background smoothly (2s) */
       /* transition: ________; */
     }
 
     .colorTransition:hover {
+      background-color: lightgreen;
       /* Q6: Change background color to lightgreen */
       /* background: ________; */
     }
 
     .moveTransition {
+      transform: translateX(30px) rotate(15deg);
       /* Q7: Smoothly move right and rotate using transition */
       /* transition: ________; */
     }
 
     .moveTransition:hover {
+      transform: translateX(100px) rotate(30deg);
       /* Q8: Use transform to move 100px right + rotate 30deg */
       /* transform: ________; */
     }
 
     .timing {
+      transition-duration: 2s;
+      transition-timing-function: ease-in-out;
       background: gold;
       /* Q9: Apply a 2s transition with ease-in-out */
       /* transition: ________; */
     }
 
     .timing:hover {
+      width: 200px;
       /* Q10: Increase width to 200px */
       /* width: ________; */
     }
@@ -94,6 +105,7 @@
        🔹 PART 3: ANIMATIONS
        ========================================================= */
     .bounce {
+      animation: bounceBox 2s infinite ;
       /* Q11: Add animation called "bounceBox" lasting 2s infinitely */
       /* animation: ________; */
     }
@@ -101,83 +113,137 @@
     /* Q12: Define bounce movement (up & down using translateY) */
     @keyframes bounceBox {
       0% { transform: translateY(0); }
-      50% {  }
-      100% {  }
+      50% { transform: translateY(-100px); }
+      100% { transform: translateY(0); }
     }
 
     .colorLoop {
+      animation: colorLoop 4s infinite ;
+
       /* Q13: Animate color change in 4s infinitely */
       /* animation: ________; */
     }
 
     /* Q14: Color transition sequence red → orange → yellow → green → blue */
     @keyframes colorLoop {
-      
+      0%{
+        background-color: red;
+      }
+      25%{
+        background-color: orange;
+      }
+      50%{
+        background-color: yellow;
+      }
+      75%{
+        background-color: green;
+      }
+      100%{
+        background-color: blue;
     }
+  }
 
     .rotateMove {
       background: skyblue;
+      animation: rotateMove 3s infinite ease-in-out ;
       /* Q15: Animate "rotateMove" (3s, infinite, ease-in-out) */
       /* animation: ________; */
     }
 
     /* Q16: Move 150px right + rotate 360deg */
     @keyframes rotateMove {
+      0% { transform: translateX(0) rotate(0deg); }
+      100% { transform: translateX(150px) rotate(360deg); }
       
     }
 
     .fadeGrow {
       background: lightgreen;
+      animation: fadeGrow 3s 1 ;
       /* Q17: Animate "fadeGrow" for 3s only once */
       /* animation: ________; */
     }
 
     /* Q18: Fade in + grow using opacity and scale */
     @keyframes fadeGrow {
-      
+      0% {
+        opacity: 0;
+        transform: scale(0.5);
+      }
+      100% {
+        opacity: 1;
+        transform: scale(1);
     }
+  }
 
     .delay {
       background: violet;
+      animation: fadeColor 3s 1 2s ;
       /* Q19: Animate color fade (3s) with 2s delay */
       /* animation: ________; */
     }
 
     /* Q20: Violet → cyan fade */
     @keyframes fadeColor {
+      0% {
+        background-color: violet;
+      }
+      100% {
+        background-color: cyan;
+      }
       
     }
 
     .alternate {
       background: orange;
+      animation: slide 2s infinite alternate ;
       /* Q21: Animate slide (2s, infinite, alternate direction) */
       /* animation: ________; */
     }
 
     /* Q22: Move left → right → left */
     @keyframes slide {
+      0% { transform: translateX(0); }
+      50% { transform: translateX(100px); }
+      100% { transform: translateX(0); }
       
     }
 
     .fillMode {
       background: salmon;
+      animation: stretch 2s 1 forwards ;
       /* Q23: Animate stretch (2s, once, forwards) */
       /* animation: ________; */
     }
 
     /* Q24: Stretch width from 100px → 200px */
     @keyframes stretch {
+      0% { width: 100px; }
+      100% { width: 200px; }
       
     }
 
     .combo {
       background: lightblue;
+      animation: combo 5s infinite ;
       /* Q25: Animate multiple properties: move, rotate, color (5s, infinite) */
       /* animation: ________; */
     }
 
     /* Q26: Combine movement + rotation + color change */
     @keyframes combo {
+      0% {
+        transform: translateX(0) rotate(0deg);
+        background-color: lightblue;
+      }
+      50% {
+        transform: translateX(150px) rotate(180deg);
+        background-color: lightcoral;
+      }
+      100% {
+        transform: translateX(0) rotate(360deg);
+        background-color: lightblue;
+      }
       
     }
   </style>
