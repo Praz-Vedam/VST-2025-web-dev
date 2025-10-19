@@ -36,6 +36,7 @@
        🔹 PART 1: TRANSFORMS
        ========================================================= */
     .translate:hover {
+      transform: translate(60px, 20px);
       /* Q1: Move 60px right and 20px down */
       /* transform: ________; */
     }
@@ -43,15 +44,18 @@
     .rotate:hover {
       /* Q2: Rotate 45 degrees clockwise */
       /* transform: ________; */
+      transform: rotate(45deg);
     }
 
     .scale:hover {
       /* Q3: Make 1.5x bigger */
+      transform: scale(1.5);
       /* transform: ________; */
     }
 
     .skew:hover {
       /* Q4: Tilt 20deg horizontally */
+      transform: skewX(20deg);
       /* transform: ________; */
     }
 
@@ -61,32 +65,39 @@
     .colorTransition {
       background: tomato;
       /* Q5: Add transition to change background smoothly (2s) */
+      transition: 2s;
       /* transition: ________; */
     }
 
     .colorTransition:hover {
       /* Q6: Change background color to lightgreen */
+      background: lightgreen;
       /* background: ________; */
     }
 
     .moveTransition {
       /* Q7: Smoothly move right and rotate using transition */
+  transform: translate(16px) rotate(30deg);
+      transition: transform 1s;
       /* transition: ________; */
     }
 
     .moveTransition:hover {
       /* Q8: Use transform to move 100px right + rotate 30deg */
+      transform: translate(100px) rotate(30deg);
       /* transform: ________; */
     }
 
     .timing {
       background: gold;
       /* Q9: Apply a 2s transition with ease-in-out */
+      transition: all 2s ease-in-out;
       /* transition: ________; */
     }
 
     .timing:hover {
       /* Q10: Increase width to 200px */
+      width: 200px;
       /* width: ________; */
     }
 
@@ -95,6 +106,7 @@
        ========================================================= */
     .bounce {
       /* Q11: Add animation called "bounceBox" lasting 2s infinitely */
+      
       /* animation: ________; */
     }
 
