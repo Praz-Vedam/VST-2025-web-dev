@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h3 id="greetings">I have been modified</h3>
+    <p>I'm an old Para. Pls end me :/</p>
+    <script>
+      //1.Modify h3 text
+
+      let h3 = document.querySelector("#greetings");
+      h3.textContent = "I have been modified";
+
+      //2.Add a new div
+      let newDiv = document.createElement("div");
+      newDiv.textContent = " Pray pray pray!";
+
+      //append
+      document.body.appendChild(newDiv);
+
+      //3.Remove the paragraph
+      let para = document.querySelector("p");
+      para.remove();
+
+    </script>
+  </body>
+</html>

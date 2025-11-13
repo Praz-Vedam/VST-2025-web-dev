@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Events</title>
+    <style>
+      body {
+        padding: 20px;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      #colorBox {
+        height: 200px;
+        width: 200px;
+        background: lightblue;
+        margin: 10px 0px;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>🎧 Event Listeners Examples</h2>
+    <button id="clickBtn">Click Me!</button>
+    <div id="colorBox"></div>
+
+    <form id="myForm">
+      <input type="text" id="nameInput" placeholder="Type your name" />
+      <button type="submit">Submit</button>
+    </form>
+
+    <script>
+      //1. Click event
+
+      let btn = document.getElementById("clickBtn");
+      btn.addEventListener("click", () => {
+        let myDiv = document.getElementById("colorBox");
+        myDiv.style.backgroundColor = "green";
+      });
+
+      //2.Key Press event
+      const input = document.getElementById("nameInput");
+      input.addEventListener("keypress", (event) => {
+        console.log("Key pressed:", event.key);
+      });
+    </script>
+  </body>
+</html>

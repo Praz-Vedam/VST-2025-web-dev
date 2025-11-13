@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM manipulation</title>
+  </head>
+  <body>
+    <h3 id="greeting">Good morning everyone</h3>
+
+    <div>I am an old paragraph :/ , Pls end me.1</div>
+    <div>I am an old paragraph :/ , Pls end me.2</div>
+    <div>I am an old paragraph :/ , Pls end me.3</div>
+
+    <script>
+      let newDiv = document.createElement("div");
+      newDiv.innerHTML = "<b>Messi</b>/Ronaldo - who is better ?";
+      document.body.appendChild(newDiv);
+
+      let oldDiv = document.querySelector("div");
+      oldDiv.remove();
+    </script>
+  </body>
+</html>
