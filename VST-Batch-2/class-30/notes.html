@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To-do List</title>
+    <style>
+      body {
+        font-family: sans-serif;
+        margin: 40px;
+      }
+
+      h1 {
+        color: purple;
+      }
+
+      input {
+        padding: 8px;
+        width: 200px;
+      }
+
+      button {
+        padding: 8px 12px;
+        margin-left: 5px;
+      }
+
+      ul {
+        margin-top: 20px;
+        padding: 0;
+        list-style-type: none;
+      }
+
+      li {
+        background: #f2f2f2;
+        margin-bottom: 5px;
+        padding: 8px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .delete {
+        background: red;
+        color: white;
+        border: none;
+        padding: 4px 8px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>📝 Simple Notes App</h1>
+
+    <input id="noteInput" type="text" placeholder="Write a note..." />
+    <button id="addBtn">Add</button>
+
+    <ul id="noteList"></ul>
+
+    <script>
+      //Select elements
+      let input = document.querySelector("#noteInput");
+      let addBtn = document.querySelector("#addBtn");
+      let noteList = document.querySelector("#noteList");
+
+      //Add notes event
+      addBtn.addEventListener("click", function () {
+        //read input
+        const text = input.value.trim(); // trim function clears white spaces on both sides of the string
+
+        //empty note - alert
+        if (text === "") {
+          alert("Notes can't be empty");
+          return;
+          //end my function here
+        }
+        //create li
+        const li = document.createElement("li");
+        li.textContent = text;
+
+        //create deleteBtn
+        const delBtn = document.createElement("button");
+        delBtn.textContent = "delete";
+        delBtn.classList.add("delete"); //styling class added
+
+        delBtn.addEventListener("click", () => {
+          li.remove();
+        });
+
+        //append deletebtn to li
+        li.appendChild(delBtn);
+        //apend li to list
+        noteList.appendChild(li);
+
+
+        //clear input
+        input.value = "";
+      });
+    </script>
+  </body>
+</html>
