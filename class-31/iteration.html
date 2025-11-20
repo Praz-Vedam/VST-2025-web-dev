@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Iteration</title>
+  </head>
+  <body>
+    <script>
+      //forEach
+
+      let students = ["aman", "ravi", "rahul"];
+      students.forEach(function (stu) {
+        console.log(stu);
+      });
+
+      students.forEach(function (stu) {
+        console.log("Hello " + stu);
+      });
+
+      //map-1
+
+      //   var numbers = [1, 2, 3, 4];
+
+      //   var sqaures = numbers.map(function (num) {
+      //     return num * num;
+      //   });
+
+      //   console.log(sqaures);
+
+      //map-2
+
+      var salaries = [10000, 20000, 30000];
+
+      salaries = salaries.map(function (sal) {
+        return sal + 1000;
+      });
+
+      console.log(salaries);
+
+      //Filter
+
+      //api data
+
+      var numbers = [1, 2, 3, 4, 5, 6];
+
+      var evens = numbers.filter(function (n) {
+        // if (n % 2 == 0) {
+        //   return true;
+        // } else {
+        //   return false;
+        // }
+
+        return n % 2 == 0;
+      });
+
+      console.log(evens);
+
+      //Reduce
+      var numbers = [10, 20, 30];
+      var sum = numbers.reduce(function (total, num) {
+        return total + num;
+      }, 0);
+
+      console.log(sum);
+    </script>
+  </body>
+</html>
