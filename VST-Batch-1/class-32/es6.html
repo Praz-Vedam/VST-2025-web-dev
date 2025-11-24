@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ES6+</title>
+  </head>
+  <body>
+    <script>
+      //arrow fucntion
+      const add = (a, b) => a + b;
+
+      console.log(add(5, 7));
+
+      //Template literals
+      //   let name = "Riya";
+      //   let age = 20;
+
+      //   console.log(`My name is ${name} and my age is ${age}.`);
+
+      console.log(`
+      Line 1
+      Line 2
+      Line 3
+      `);
+
+      //Destructuring
+
+      //   let colors = ["red", "green", "blue"];
+      //let [first,second] = colors
+      //   console.log(first);
+      //   console.log(second);
+
+      let student = {
+        name: "Kabir",
+        age: 160,
+        city: "Mumbai",
+      };
+
+      let { name, age } = student;
+
+      console.log(name, age);
+
+      //Spread operator ...
+
+      let a = [1, 2, 3];
+      let b = [...a, 4, 5, 6];
+      console.log(b);
+
+      let p1 = { x: 10, y: 20 };
+      let p2 = { ...p1, z: 30 };
+
+      console.log(p2); //??output
+
+      //Rest operator ...
+
+      function sum(...nums) {
+        return nums.reduce(function (total, num) {
+          return total + num;
+        }, 0);
+      }
+      console.log(sum(1, 2, 3));
+      console.log(sum(10, 20, 30, 40));
+      console.log(sum(1, 2));
+
+      let [x, y, ...rest] = [10, 20, 30, 40, 50];
+
+      console.log(rest);
+    </script>
+  </body>
+</html>
