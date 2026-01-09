@@ -43,14 +43,14 @@
 
       //Spread operator ...
 
-      let a = [1, 2, 3];
-      let b = [...a, 4, 5, 6];
-      console.log(b);
+      //   let a = [1, 2, 3];
+      //   let b = [...a, 4, 5, 6];
+      //   console.log(b);
 
-      let p1 = { x: 10, y: 20 };
-      let p2 = { ...p1, z: 30 };
+      //   let p1 = { x: 10, y: 20 };
+      //   let p2 = { ...p1, z: 30 };
 
-      console.log(p2); //??output
+      //   console.log(p2); //??output
 
       //Rest operator ...
 
@@ -66,6 +66,19 @@
       let [x, y, ...rest] = [10, 20, 30, 40, 50];
 
       console.log(rest);
+
+      let person = { name: "Alpha", city: "Mumbai" };
+
+      let p1 = person;//Shallow copy -> new variable pointing to the same heap address.(Alias)
+
+      let p2 = { ...person }; //Deep copy -> new object with duplicate content
+
+      person.name = "Beta";
+
+      console.log(p1.name);
+      console.log(p2.name);
+
+      
     </script>
   </body>
 </html>

@@ -1,166 +1,173 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>ES6+ JavaScript Practice Worksheet</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      padding: 30px;
-      line-height: 1.6;
-    }
-    h2 { color: purple; }
-    h3 { color: #444; }
-    .box {
-      border: 1px solid #ccc;
-      padding: 15px;
-      margin-bottom: 30px;
-      border-radius: 6px;
-    }
-    code {
-      background: #f3f3f3;
-      padding: 3px 6px;
-      border-radius: 4px;
-    }
-  </style>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <title>ES6+ JavaScript Practice Worksheet</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        padding: 30px;
+        line-height: 1.6;
+      }
+      h2 {
+        color: purple;
+      }
+      h3 {
+        color: #444;
+      }
+      .box {
+        border: 1px solid #ccc;
+        padding: 15px;
+        margin-bottom: 30px;
+        border-radius: 6px;
+      }
+      code {
+        background: #f3f3f3;
+        padding: 3px 6px;
+        border-radius: 4px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>ES6+ JavaScript Worksheet – Feynman Style</h1>
+    <p>
+      Write your answers inside the <code>&lt;script&gt;</code> tags provided in
+      every question.
+    </p>
 
-  <h1>ES6+ JavaScript Worksheet – Feynman Style</h1>
-  <p>Write your answers inside the <code>&lt;script&gt;</code> tags provided in every question.</p>
+    <!-- 1. ARROW FUNCTIONS -->
+    <div class="box">
+      <h2>1️⃣ Arrow Functions</h2>
 
-  <!-- 1. ARROW FUNCTIONS -->
-  <div class="box">
-    <h2>1️⃣ Arrow Functions</h2>
-
-    <h3>Q1 — Convert the normal function into an arrow function</h3>
-    <pre><code>
+      <h3>Q1 — Convert the normal function into an arrow function</h3>
+      <pre><code>
 function multiply(a, b) {
   return a * b;
 }
     </code></pre>
 
-    <script>
-    // Q1 — Write your arrow function here:
+      <script>
+        // Q1 — Write your arrow function here:
+        const multiply = (a, b) => a * b;
+      </script>
 
-    </script>
+      <h3>Q2 — Create an arrow function that returns the square of a number</h3>
+      <script>
+        // Q2 — Write your arrow function here:
+        const square = (n) => n * n;
+      </script>
+    </div>
 
-    <h3>Q2 — Create an arrow function that returns the square of a number</h3>
-    <script>
-    // Q2 — Write your arrow function here:
+    <!-- 2. TEMPLATE LITERALS -->
+    <div class="box">
+      <h2>2️⃣ Template Literals</h2>
 
-    </script>
-  </div>
+      <h3>Q3 — Use a template literal to print:</h3>
+      <p><b>“My friend Ravi is 14 years old.”</b></p>
 
+      <script>
+        // Q3 — Template literal
+        let name = "Ravi";
+        let age = 14;
 
-  <!-- 2. TEMPLATE LITERALS -->
-  <div class="box">
-    <h2>2️⃣ Template Literals</h2>
+        // Write your code here:
 
-    <h3>Q3 — Use a template literal to print:</h3>
-    <p><b>“My friend Ravi is 14 years old.”</b></p>
+        `My friend ${name} is ${age} years old.`;
+      </script>
 
-    <script>
-    // Q3 — Template literal
-    let name = "Ravi";
-    let age = 14;
+      <h3>Q4 — Write a multi-line template literal</h3>
 
-    // Write your code here:
+      <script>
+        // Q4 — multi-line template literal:
+        `Line1 ${name}
+        Line2
+        Line3`;
+      </script>
+    </div>
 
-    </script>
+    <!-- 3. DESTRUCTURING -->
+    <div class="box">
+      <h2>3️⃣ Destructuring</h2>
 
-    <h3>Q4 — Write a multi-line template literal</h3>
-
-    <script>
-    // Q4 — multi-line template literal:
-
-    </script>
-  </div>
-
-
-  <!-- 3. DESTRUCTURING -->
-  <div class="box">
-    <h2>3️⃣ Destructuring</h2>
-
-    <h3>Q5 — Destructure brand & model from object</h3>
-    <pre><code>
-let car = {
-  brand: "Honda",
-  model: "Civic",
-  year: 2020
-};
+      <h3>Q5 — Destructure brand & model from object</h3>
+      <pre><code>
+            let car = {
+            brand: "Honda",
+            model: "Civic",
+            year: 2020
+            };
     </code></pre>
 
-    <script>
-    // Q5 — Write your destructuring code here:
+      <script>
+        // Q5 — Write your destructuring code here:
 
-    </script>
+        let { brand, model } = car;
 
-    <h3>Q6 — Destructure first two colors from array</h3>
+        conosle.log(brand, model);
+      </script>
 
-    <script>
-    let colors = ["red", "blue", "green", "yellow"];
+      <h3>Q6 — Destructure first two colors from array</h3>
 
-    // Q6 — Write destructuring here:
+      <script>
+        let colors = ["red", "blue", "green", "yellow"];
+        const [firstColor, secondColor] = colors;
+        // Q6 — Write destructuring here:
+      </script>
+    </div>
 
-    </script>
-  </div>
+    <!-- 4. SPREAD OPERATOR -->
+    <div class="box">
+      <h2>4️⃣ Spread Operator</h2>
 
+      <h3>Q7 — Combine arrays using spread</h3>
 
-  <!-- 4. SPREAD OPERATOR -->
-  <div class="box">
-    <h2>4️⃣ Spread Operator</h2>
+      <script>
+        let a = [1, 2];
+        let b = [3, 4];
 
-    <h3>Q7 — Combine arrays using spread</h3>
+        // Q7 — Write spread code here:
+        let c = [...a, ...b];
+      </script>
 
-    <script>
-    let a = [1, 2];
-    let b = [3, 4];
+      <h3>Q8 — Spread to copy object and add property</h3>
 
-    // Q7 — Write spread code here:
-
-    </script>
-
-    <h3>Q8 — Spread to copy object and add property</h3>
-
-    <script>
-    let person = { name: "Asha", city: "Mumbai" };
-
-    // Q8 — Copy and add age: 16
-
-    </script>
-  </div>
+      <script>
+        let person = { name: "Asha", city: "Mumbai" };
+        let p1 = person;
+        let p2 = { ...person };
 
 
-  <!-- 5. REST OPERATOR -->
-  <div class="box">
-    <h2>5️⃣ Rest Operator</h2>
+        console.log(p1.name)
+        console.log(p2.name)
+      </script>
+    </div>
 
-    <h3>Q9 — Function that returns all items except the first</h3>
-    <pre><code>
+    <!-- 5. REST OPERATOR -->
+    <div class="box">
+      <h2>5️⃣ Rest Operator</h2>
+
+      <h3>Q9 — Function that returns all items except the first</h3>
+      <pre><code>
 // Example:
 // getRest(10, 20, 30, 40) → [20, 30, 40]
     </code></pre>
 
-    <script>
-    // Q9:
+      <script>
+        // Q9:
 
-    function getRest(/* rest operator here */) {
-      // return remaining items
-    }
+        function getRest(/* rest operator here */) {
+          // return remaining items
+        }
+      </script>
 
-    </script>
+      <h3>Q10 — Rest in array destructuring</h3>
 
-    <h3>Q10 — Rest in array destructuring</h3>
+      <script>
+        let nums = [5, 10, 15, 20, 25];
 
-    <script>
-    let nums = [5, 10, 15, 20, 25];
-
-    // Q10 — first = 5
-    //        rest = [10, 15, 20, 25]
-
-    </script>
-  </div>
-
-</body>
+        // Q10 — first = 5
+        //        rest = [10, 15, 20, 25]
+      </script>
+    </div>
+  </body>
 </html>
