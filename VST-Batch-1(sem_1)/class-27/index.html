@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM</title>
+    <style>
+      body {
+        text-align: center;
+        padding: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>DOM Manipulation Demo</h2>
+
+    <p id="intro">Welcome to JavaScript DOM!</p>
+
+    <script>
+      //Find element
+      let introElement = document.getElementById("intro");
+
+      //Change text
+
+      introElement.innerText = "Hello students";
+
+      //change background color
+
+      document.body.style.backgroundColor = "pink";
+
+//create new element
+
+let newPara = document.createElement("p");
+newPara.innerText = "I was created using javascript";
+document.body.appendChild(newPara);
+
+
+let newPara2 = document.createElement("p");
+newPara2.innerText = "I was created using javascript -2";
+document.body.appendChild(newPara2);
+
+
+    </script>
+    <!-- <script src="./scripts.js"></script> -->
+  </body>
+</html>

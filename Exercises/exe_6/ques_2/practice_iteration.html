@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Array Methods Practice (forEach / map / filter / reduce)</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <style>
+      body {
+        font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial;
+        padding: 18px;
+        line-height: 1.45;
+        color: #111;
+      }
+      h1 {
+        margin-top: 0;
+      }
+      .problem {
+        border: 1px solid #ddd;
+        padding: 12px;
+        border-radius: 8px;
+        margin-bottom: 18px;
+        background: #fafafa;
+      }
+      .instructions {
+        font-size: 0.95rem;
+        color: #333;
+        margin-bottom: 8px;
+      }
+      textarea {
+        width: 100%;
+        height: 140px;
+        font-family: monospace;
+        font-size: 13px;
+        padding: 8px;
+        box-sizing: border-box;
+      }
+      button {
+        margin-top: 8px;
+        padding: 8px 12px;
+        border-radius: 6px;
+        border: 1px solid #2b6cb0;
+        background: #3182ce;
+        color: white;
+        cursor: pointer;
+      }
+      button:active {
+        transform: translateY(1px);
+      }
+      pre.output {
+        background: #111;
+        color: #e6fffa;
+        padding: 10px;
+        border-radius: 6px;
+        white-space: pre-wrap;
+        min-height: 40px;
+        margin-top: 8px;
+      }
+      .hint {
+        font-size: 0.9rem;
+        color: #555;
+        margin-top: 6px;
+      }
+      .small {
+        font-size: 0.9rem;
+        color: #666;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Array Methods Practice — write JavaScript in the boxes</h1>
+    <p class="small">
+      Use only the full <code>function(...) { ... }</code> form (no arrow
+      functions).
+    </p>
+
+    <!-- ------------------------------------------------------ -->
+    <!-- PROBLEM SET: forEach -->
+    <!-- ------------------------------------------------------ -->
+
+    <!-- Problem 1 -->
+    <div class="problem">
+      <h2>Problem 1 — <em>forEach</em></h2>
+      <p class="instructions">Print a greeting for each student.</p>
+      <pre class="small">var students = ["Aman", "Sara", "Rahul"];</pre>
+
+      <textarea id="code1">// your solution</textarea>
+      <button onclick="runProblem('code1','out1')">Run</button>
+      <div class="hint">Expected: Hello Aman, Hello Sara, Hello Rahul</div>
+      <pre id="out1" class="output"></pre>
+    </div>
+
+    <!-- Problem 2 (NEW) -->
+    <div class="problem">
+      <h2>Problem 2 — <em>forEach</em></h2>
+      <p class="instructions">Print each number multiplied by 10.</p>
+      <pre class="small">var nums = [2, 4, 6, 8];</pre>
+
+      <textarea id="code1b">// your solution</textarea>
+      <button onclick="runProblem('code1b','out1b')">Run</button>
+      <div class="hint">Expected: 20, 40, 60, 80</div>
+      <pre id="out1b" class="output"></pre>
+    </div>
+
+    <!-- Problem 3 (NEW) -->
+    <div class="problem">
+      <h2>Problem 3 — <em>forEach</em></h2>
+      <p class="instructions">Print each city name in uppercase.</p>
+      <pre class="small">var cities = ["mumbai", "delhi", "pune"];</pre>
+
+      <textarea id="code1c">// your solution</textarea>
+      <button onclick="runProblem('code1c','out1c')">Run</button>
+      <div class="hint">Expected: MUMBAI, DELHI, PUNE</div>
+      <pre id="out1c" class="output"></pre>
+    </div>
+
+    <!-- ------------------------------------------------------ -->
+    <!-- PROBLEM SET: map -->
+    <!-- ------------------------------------------------------ -->
+
+    <!-- Problem 4 -->
+    <div class="problem">
+      <h2>Problem 4 — <em>map</em></h2>
+      <p class="instructions">Create cubes of each number.</p>
+      <pre class="small">var numbers = [1, 2, 3, 4];</pre>
+
+      <textarea id="code2">// your solution</textarea>
+      <button onclick="runProblem('code2','out2')">Run</button>
+      <div class="hint">Expected: [1, 8, 27, 64]</div>
+      <pre id="out2" class="output"></pre>
+    </div>
+
+    <!-- Problem 5 (NEW) -->
+    <div class="problem">
+      <h2>Problem 5 — <em>map</em></h2>
+      <p class="instructions">
+        Convert each temperature from Celsius to Fahrenheit.
+      </p>
+      <pre class="small">var temps = [0, 10, 20, 30];</pre>
+
+      <textarea id="code2b">// your solution</textarea>
+      <button onclick="runProblem('code2b','out2b')">Run</button>
+      <div class="hint">Expected: [32, 50, 68, 86]</div>
+      <pre id="out2b" class="output"></pre>
+    </div>
+
+    <!-- Problem 6 (NEW) -->
+    <div class="problem">
+      <h2>Problem 6 — <em>map</em></h2>
+      <p class="instructions">Add the prefix "Mr. " to each name.</p>
+      <pre class="small">var names = ["Aman", "Imran", "Kabir"];</pre>
+
+      <textarea id="code2c">// your solution</textarea>
+      <button onclick="runProblem('code2c','out2c')">Run</button>
+      <div class="hint">Expected: ["Mr. Aman", "Mr. Imran", "Mr. Kabir"]</div>
+      <pre id="out2c" class="output"></pre>
+    </div>
+
+    <!-- ------------------------------------------------------ -->
+    <!-- PROBLEM SET: filter -->
+    <!-- ------------------------------------------------------ -->
+
+    <!-- Problem 7 -->
+    <div class="problem">
+      <h2>Problem 7 — <em>filter</em></h2>
+      <p class="instructions">Filter ages 18 or older.</p>
+      <pre class="small">var ages = [12, 18, 21, 15, 30];</pre>
+
+      <textarea id="code3">// your solution</textarea>
+      <button onclick="runProblem('code3','out3')">Run</button>
+      <div class="hint">Expected: [18, 21, 30]</div>
+      <pre id="out3" class="output"></pre>
+    </div>
+
+    <!-- Problem 8 (NEW) -->
+    <div class="problem">
+      <h2>Problem 8 — <em>filter</em></h2>
+      <p class="instructions">Filter only even numbers.</p>
+      <pre class="small">var nums2 = [5, 6, 12, 19, 20, 25];</pre>
+
+      <textarea id="code3b">// your solution</textarea>
+      <button onclick="runProblem('code3b','out3b')">Run</button>
+      <div class="hint">Expected: [6, 12, 20]</div>
+      <pre id="out3b" class="output"></pre>
+    </div>
+
+    <!-- Problem 9 (NEW) -->
+    <div class="problem">
+      <h2>Problem 9 — <em>filter</em></h2>
+      <p class="instructions">Filter names longer than 4 letters.</p>
+      <pre class="small">var friends = ["Raj", "Simran", "Avi", "Kabir"];</pre>
+
+      <textarea id="code3c">// your solution</textarea>
+      <button onclick="runProblem('code3c','out3c')">Run</button>
+      <div class="hint">Expected: ["Simran", "Kabir"]</div>
+      <pre id="out3c" class="output"></pre>
+    </div>
+
+    <!-- ------------------------------------------------------ -->
+    <!-- PROBLEM SET: reduce (unchanged) -->
+    <!-- ------------------------------------------------------ -->
+
+    <!-- Problem 10 -->
+    <div class="problem">
+      <h2>Problem 10 — <em>reduce</em></h2>
+      <p class="instructions">Compute the total price.</p>
+      <pre class="small">var prices = [100, 250, 50];</pre>
+
+      <textarea id="code4">// your solution</textarea>
+      <button onclick="runProblem('code4','out4')">Run</button>
+      <div class="hint">Expected: 400</div>
+      <pre id="out4" class="output"></pre>
+    </div>
+
+    <script>
+      function runProblem(textareaId, outputId) {
+        var code = document.getElementById(textareaId).value;
+        var out = document.getElementById(outputId);
+        out.textContent = "";
+
+        var logs = [];
+        var originalConsoleLog = console.log;
+        console.log = function () {
+          var args = Array.prototype.slice.call(arguments);
+          var line = args
+            .map(function (a) {
+              try {
+                return JSON.stringify(a);
+              } catch (e) {
+                return String(a);
+              }
+            })
+            .join(" ");
+          if (
+            line.length >= 2 &&
+            line[0] === '"' &&
+            line[line.length - 1] === '"'
+          ) {
+            line = line.substring(1, line.length - 1);
+          }
+          logs.push(line);
+          originalConsoleLog.apply(console, arguments);
+        };
+
+        var wrapper =
+          "(function() {\n" +
+          '  var students = ["Aman", "Sara", "Rahul"];\n' +
+          "  var nums = [2, 4, 6, 8];\n" +
+          '  var cities = ["mumbai", "delhi", "pune"];\n' +
+          "  var numbers = [1, 2, 3, 4];\n" +
+          "  var temps = [0, 10, 20, 30];\n" +
+          '  var names = ["Aman", "Imran", "Kabir"];\n' +
+          "  var ages = [12, 18, 21, 15, 30];\n" +
+          "  var nums2 = [5, 6, 12, 19, 20, 25];\n" +
+          '  var friends = ["Raj", "Simran", "Avi", "Kabir"];\n' +
+          "  var prices = [100, 250, 50];\n" +
+          "  try {\n" +
+          code +
+          "\n" +
+          "  } catch (err) { console.log('Error: ' + err.message); }\n" +
+          "})();";
+
+        try {
+          var fn = new Function(wrapper);
+          fn();
+        } catch (e) {
+          logs.push("Execution error: " + e.message);
+        }
+
+        console.log = originalConsoleLog;
+
+        if (logs.length === 0) out.textContent = "(no output)";
+        else out.textContent = logs.join("\n");
+      }
+    </script>
+  </body>
+</html>

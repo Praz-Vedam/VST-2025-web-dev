@@ -43,19 +43,16 @@
 
     .rotate:hover {
       /* Q2: Rotate 45 degrees clockwise */
-      /* transform: ________; */
       transform: rotate(45deg);
     }
 
     .scale:hover {
       /* Q3: Make 1.5x bigger */
-      /* transform: ________; */
       transform: scale(1.5);
     }
 
     .skew:hover {
       /* Q4: Tilt 20deg horizontally */
-      /* transform: ________; */
       transform: skewX(20deg);
     }
 
@@ -65,8 +62,7 @@
     .colorTransition {
       background: tomato;
       /* Q5: Add transition to change background smoothly (2s) */
-      /* transition: ________; */
-      transition-duration: 2s;
+      transition: background 2s ease;
     }
 
     .colorTransition:hover {
@@ -92,29 +88,28 @@
     .timing {
       background: gold;
       /* Q9: Apply a 2s transition with ease-in-out */
-      /* transition: ________; */
-      transition-duration: 2s;
-      transition-timing-function: ease-in-out;
+      transition: width 2s ease-in-out;
     }
 
     .timing:hover {
       /* Q10: Increase width to 200px */
       /* width: ________; */
+      width:200px;
       transition-duration: 2s;
       transition-timing-function: ease-in-out;
-      width: 200px;
+      
     }
 
     /* =========================================================
        🔹 PART 3: ANIMATIONS
        ========================================================= */
     .bounce {
+      
+      /* Q11: Add animation called "bounceBox" lasting 2s infinitely */
       background-color: lightgreen;
       animation-name: bounceBox;
       animation-duration: 2s;
       animation-iteration-count: infinite;
-      /* Q11: Add animation called "bounceBox" lasting 2s infinitely */
-      /* animation: ________; */
     }
 
     /* Q12: Define bounce movement (up & down using translateY) */
@@ -331,5 +326,5 @@ opacity: 0.1;
     <div class="box combo"></div>
   </div>
 </body>
-
 </html>
+

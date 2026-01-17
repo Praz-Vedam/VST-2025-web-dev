@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arrays and Objects in Js</title>
+  </head>
+  <body>
+    <script>
+      // -----------------------------Arrays--------------------------
+
+      //Create an array
+      let numbers = [10, 20, 30];
+      console.log("Array: ", numbers);
+
+      //Access elements
+      console.log(numbers[0]);
+      let n = numbers.length;
+      console.log(numbers[n - 1]);
+
+      //Modify Arrays
+      numbers.push(40);
+      console.log("After push: ", numbers);
+
+      numbers.pop();
+      console.log("After pop: ", numbers);
+
+      numbers.unshift(5);
+      console.log("After unshift: ", numbers);
+
+      numbers.shift();
+      console.log("After shift: ", numbers);
+
+      //Loop - print all the elements of an array using a for loop
+
+      for (let i = 0; i < n; i++) {
+        console.log("Index" + i + "->" + numbers[i]);
+      }
+
+      //Search
+      console.log("search " + numbers.indexOf(30));
+
+      //------------------------Objects---------------------------
+
+      const student = {
+        name: "Arjun",
+        age: 15,
+        // city:'',
+        phone: 100,
+        greet: function () {
+          console.log("Hi, I'm " + this.name);
+        },
+      };
+
+      //Accessing values
+      console.log("Name: ", student.name); //dot -notation
+
+      console.log("Phone: ", student["phone"]); //bracket -notation //!!!! avoid
+
+      //Adding properties
+
+      student.city = "Pune";// !!!!!avoid
+      console.log("Updated object", student);
+
+      //Access Methods
+      student.greet();
+
+
+    </script>
+  </body>
+</html>

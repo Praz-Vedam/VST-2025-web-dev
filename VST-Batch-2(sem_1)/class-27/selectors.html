@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>selectors</title>
+  </head>
+  <body>
+    <p id="greeting">Hello!</p>
+
+    <p class="info">Line 1</p>
+    <p class="info">Line 2</p>
+
+     <p class="note">Note 1</p>
+    <p class="note">Note 2</p>
+
+    <script>
+      let para = document.getElementById("greeting");
+      console.log(para.textContent);
+
+      let lines = document.getElementsByClassName("info");
+      console.log(lines[0].textContent);
+      console.log(lines[1].textContent);
+
+
+      let firstNote = document.querySelector('.note');
+      console.log(firstNote.textContent);
+
+
+      let allNotes = document.querySelectorAll('.note');
+      console.log(allNotes[1].textContent);
+    </script>
+  </body>
+</html>

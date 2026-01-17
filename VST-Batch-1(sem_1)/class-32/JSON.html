@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JSON(JavaScript Object Notation)</title>
+  </head>
+  <body>
+    <div>
+      -It is a string. -Looks like an object. -Is not an object untill you
+      convert it.
+    </div>
+
+    <script>
+      //After recieving JSON data from Backend API.
+      let jsonStr = '{"name":"Asha","age":15}';
+
+      let obj = JSON.parse(jsonStr);
+
+      console.log(obj);
+
+      //Before sending data through API
+
+      let student = {
+        name: "Asha",
+        age: 15,
+      };
+
+      let jsonData = JSON.stringify(student);
+
+      console.log(jsonData);
+
+    //Use case example
+      async function getUser() {
+        let response = await fetch(
+          "https://jsonplaceholder.typicode.com/users/1"
+        );
+        let data = await response.json(); //conversion from JSON to js object
+        console.log(data);
+      }
+
+     getUser();
+    </script>
+  </body>
+</html>

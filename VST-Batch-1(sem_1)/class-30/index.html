@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arrays And Objects</title>
+  </head>
+  <body>
+    <script>
+      /***********************
+        ARRAYS PRACTICE
+      ***********************/
+
+      //Create an array
+
+      let numbers = [10, 20, 30];
+      console.log("Array: ", numbers);
+
+      //Accessing an element
+      console.log("First elem:", numbers[0]);
+
+      const n = numbers.length;
+      console.log("Last elem:", numbers[n - 1]);
+
+      //Modify array
+
+      numbers.push(40);
+      console.log("after push ", numbers);
+      numbers.pop();
+      console.log("after pop ", numbers);
+
+      numbers.unshift(5);
+      console.log("after unshift ", numbers);
+      numbers.shift();
+      console.log("after shift ", numbers);
+
+      //Loop
+      for (let i = 0; i < n; i++) {
+        console.log("Index " + i + "-> " + numbers[i]);
+      }
+
+      //Search ---> linear search
+      console.log("Index of 20", numbers.indexOf(20));
+
+      /***********************
+       OBJECTS PRACTICE
+      ***********************/
+
+      let student_1 = {
+        name: "Arjun",
+        DOB: "01/06/1990",
+        grade: "10th",
+        age: function () {
+          //today's date - DOB
+        },
+        greet: function () {
+          console.log("Hi I'm " + this.name);
+        },
+      };
+
+      let student_2 = {
+        name: "Karan",
+        DOB: "01/06/1fds990",
+        grade: "10tfdsfh",
+        age: function () {
+          //today's date - DOB
+        },
+        greet: function () {
+          console.log("Hi I'm " + this.name);
+        },
+      };
+
+      //Accessing values
+
+      console.log("name: ", student_1.name); //Dot notation
+      console.log("grade: ", student_1["grade"]); //Bracket notation---avoid
+
+      //using methods
+      student_2.greet();
+
+
+      //Adding properties
+      student_1.city="Pune";
+      console.log(":updated object", student_1)
+    </script>
+  </body>
+</html>
