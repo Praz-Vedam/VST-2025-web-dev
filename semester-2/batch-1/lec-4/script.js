@@ -93,10 +93,12 @@ console.log("Asynchronous Programming");
 // }
 // runTask();
 
-let i = 0;
-let id = setInterval(() => {
-  console.log("I am inside interval ", ++i);
-  if(i==3){
-    clearInterval(id)
-  }
-}, 1000);
+
+// ------setInterval------
+// let i = 0;
+// let id = setInterval(() => {
+//   console.log("I am inside interval ", ++i);
+//   if(i==3){
+//     clearInterval(id)
+//   }
+// }, 1000);
