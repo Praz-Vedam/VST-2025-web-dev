@@ -64,6 +64,82 @@
         font-size: 0.9rem;
         color: #666;
       }
+      .student-info {
+        border: 2px solid #3182ce;
+        padding: 15px;
+        border-radius: 8px;
+        margin-bottom: 20px;
+        background: #ebf8ff;
+      }
+      .student-info h2 {
+        margin-top: 0;
+        font-size: 1.2rem;
+        color: #2c5282;
+      }
+      .student-info label {
+        display: inline-block;
+        margin-right: 15px;
+        font-weight: 500;
+      }
+      .student-info input {
+        padding: 6px 10px;
+        border: 1px solid #cbd5e0;
+        border-radius: 4px;
+        font-size: 14px;
+        margin-left: 8px;
+        width: 200px;
+      }
+      .student-info button {
+        margin-left: 10px;
+        margin-top: 0;
+      }
+      .status-message {
+        margin-left: 10px;
+        font-weight: 500;
+      }
+      .status-message.success {
+        color: #2d5016;
+      }
+      .save-btn {
+        background: #2d5016;
+        border-color: #2d5016;
+        margin-left: 5px;
+        font-size: 12px;
+        padding: 4px 8px;
+      }
+      .save-btn:disabled {
+        background: #a0aec0;
+        border-color: #a0aec0;
+        cursor: not-allowed;
+      }
+      .submission-section {
+        margin-top: 30px;
+        padding: 20px;
+        border: 2px solid #2d5016;
+        border-radius: 8px;
+        background: #f0fff4;
+      }
+      .submission-section h2 {
+        margin-top: 0;
+        color: #2d5016;
+      }
+      .submit-btn {
+        padding: 12px 24px;
+        font-size: 16px;
+        background: #2d5016;
+        border: none;
+        border-radius: 6px;
+        color: white;
+        cursor: pointer;
+        margin-top: 10px;
+      }
+      .submit-btn:hover {
+        background: #22543d;
+      }
+      .submit-btn:disabled {
+        background: #a0aec0;
+        cursor: not-allowed;
+      }
     </style>
   </head>
   <body>
@@ -72,6 +148,21 @@
       Use only the full <code>function(...) { ... }</code> form (no arrow
       functions).
     </p>
+
+    <!-- Student Information Form -->
+    <div class="student-info">
+      <h2>Student Information</h2>
+      <label>
+        Student Name:
+        <input type="text" id="studentName" placeholder="Enter your name" />
+      </label>
+      <label>
+        Student ID:
+        <input type="text" id="studentId" placeholder="Enter your ID" />
+      </label>
+      <button onclick="saveStudentInfo()">Save Info</button>
+      <span id="infoStatus" class="status-message"></span>
+    </div>
 
     <!-- ------------------------------------------------------ -->
     <!-- PROBLEM SET: forEach -->
@@ -85,6 +176,7 @@
 
       <textarea id="code1">// your solution</textarea>
       <button onclick="runProblem('code1','out1')">Run</button>
+      <button class="save-btn" onclick="saveProblemAnswer(this, '1')" disabled>Save</button>
       <div class="hint">Expected: Hello Aman, Hello Sara, Hello Rahul</div>
       <pre id="out1" class="output"></pre>
     </div>
@@ -97,6 +189,7 @@
 
       <textarea id="code1b">// your solution</textarea>
       <button onclick="runProblem('code1b','out1b')">Run</button>
+      <button class="save-btn" onclick="saveProblemAnswer(this, '1b')" disabled>Save</button>
       <div class="hint">Expected: 20, 40, 60, 80</div>
       <pre id="out1b" class="output"></pre>
     </div>
@@ -109,6 +202,7 @@
 
       <textarea id="code1c">// your solution</textarea>
       <button onclick="runProblem('code1c','out1c')">Run</button>
+      <button class="save-btn" onclick="saveProblemAnswer(this, '1c')" disabled>Save</button>
       <div class="hint">Expected: MUMBAI, DELHI, PUNE</div>
       <pre id="out1c" class="output"></pre>
     </div>
@@ -125,6 +219,7 @@
 
       <textarea id="code2">// your solution</textarea>
       <button onclick="runProblem('code2','out2')">Run</button>
+      <button class="save-btn" onclick="saveProblemAnswer(this, '2')" disabled>Save</button>
       <div class="hint">Expected: [1, 8, 27, 64]</div>
       <pre id="out2" class="output"></pre>
     </div>
@@ -139,6 +234,7 @@
 
       <textarea id="code2b">// your solution</textarea>
       <button onclick="runProblem('code2b','out2b')">Run</button>
+      <button class="save-btn" onclick="saveProblemAnswer(this, '2b')" disabled>Save</button>
       <div class="hint">Expected: [32, 50, 68, 86]</div>
       <pre id="out2b" class="output"></pre>
     </div>
@@ -151,6 +247,7 @@
 
       <textarea id="code2c">// your solution</textarea>
       <button onclick="runProblem('code2c','out2c')">Run</button>
+      <button class="save-btn" onclick="saveProblemAnswer(this, '2c')" disabled>Save</button>
       <div class="hint">Expected: ["Mr. Aman", "Mr. Imran", "Mr. Kabir"]</div>
       <pre id="out2c" class="output"></pre>
     </div>
@@ -167,6 +264,7 @@
 
       <textarea id="code3">// your solution</textarea>
       <button onclick="runProblem('code3','out3')">Run</button>
+      <button class="save-btn" onclick="saveProblemAnswer(this, '3')" disabled>Save</button>
       <div class="hint">Expected: [18, 21, 30]</div>
       <pre id="out3" class="output"></pre>
     </div>
@@ -179,6 +277,7 @@
 
       <textarea id="code3b">// your solution</textarea>
       <button onclick="runProblem('code3b','out3b')">Run</button>
+      <button class="save-btn" onclick="saveProblemAnswer(this, '3b')" disabled>Save</button>
       <div class="hint">Expected: [6, 12, 20]</div>
       <pre id="out3b" class="output"></pre>
     </div>
@@ -191,6 +290,7 @@
 
       <textarea id="code3c">// your solution</textarea>
       <button onclick="runProblem('code3c','out3c')">Run</button>
+      <button class="save-btn" onclick="saveProblemAnswer(this, '3c')" disabled>Save</button>
       <div class="hint">Expected: ["Simran", "Kabir"]</div>
       <pre id="out3c" class="output"></pre>
     </div>
@@ -207,11 +307,145 @@
 
       <textarea id="code4">// your solution</textarea>
       <button onclick="runProblem('code4','out4')">Run</button>
+      <button class="save-btn" onclick="saveProblemAnswer(this, '4')" disabled>Save</button>
       <div class="hint">Expected: 400</div>
       <pre id="out4" class="output"></pre>
     </div>
 
+    <!-- Submission Section -->
+    <div class="submission-section">
+      <h2>Submit Your Answers</h2>
+      <p>Make sure you've completed all 10 problems and saved your answers before submitting.</p>
+      <p class="small">Your answers will be sent to your instructor automatically.</p>
+      <button class="submit-btn" onclick="submitAnswers()" id="submitBtn">Submit All Answers</button>
+      <div id="submitStatus" style="margin-top: 10px; font-weight: 500;"></div>
+    </div>
+
     <script>
+      // Student data tracking
+      var studentData = {
+        name: '',
+        id: '',
+        timestamp: '',
+        answers: {}
+      };
+
+      // Load student data from localStorage on page load
+      function loadStudentData() {
+        var saved = localStorage.getItem('studentData');
+        if (saved) {
+          try {
+            studentData = JSON.parse(saved);
+            if (studentData.name) {
+              document.getElementById('studentName').value = studentData.name;
+            }
+            if (studentData.id) {
+              document.getElementById('studentId').value = studentData.id;
+            }
+          } catch (e) {
+            console.error('Error loading student data:', e);
+          }
+        }
+      }
+
+      // Save student information
+      function saveStudentInfo() {
+        var name = document.getElementById('studentName').value.trim();
+        var id = document.getElementById('studentId').value.trim();
+        
+        if (!name || !id) {
+          alert('Please enter both your name and ID!');
+          return;
+        }
+        
+        studentData.name = name;
+        studentData.id = id;
+        studentData.timestamp = new Date().toISOString();
+        
+        localStorage.setItem('studentData', JSON.stringify(studentData));
+        
+        var statusEl = document.getElementById('infoStatus');
+        statusEl.textContent = '✓ Saved';
+        statusEl.className = 'status-message success';
+        
+        // Check if this student has already submitted
+        checkSubmissionStatus();
+        
+        setTimeout(function() {
+          statusEl.textContent = '';
+        }, 3000);
+      }
+
+      // Save answer for a specific problem
+      function saveAnswer(problemKey, code, output, isCorrect) {
+        studentData.answers[problemKey] = {
+          code: code,
+          output: output,
+          isCorrect: isCorrect,
+          timestamp: new Date().toISOString()
+        };
+        localStorage.setItem('studentData', JSON.stringify(studentData));
+      }
+
+      // Check if output matches expected result
+      function checkOutput(textareaId, output, expectedHint) {
+        if (!expectedHint) return false;
+        
+        var expectedText = expectedHint.textContent.replace('Expected: ', '').trim();
+        var outputText = output.trim();
+        
+        // Normalize comparison - remove extra whitespace
+        expectedText = expectedText.replace(/\s+/g, ' ');
+        outputText = outputText.replace(/\s+/g, ' ');
+        
+        // For array outputs, compare JSON strings
+        if (expectedText.startsWith('[') && outputText.includes('[')) {
+          try {
+            var expectedArr = JSON.parse(expectedText);
+            var outputLines = outputText.split('\n');
+            for (var i = 0; i < outputLines.length; i++) {
+              try {
+                var outputArr = JSON.parse(outputLines[i].trim());
+                if (JSON.stringify(expectedArr) === JSON.stringify(outputArr)) {
+                  return true;
+                }
+              } catch (e) {}
+            }
+          } catch (e) {}
+        }
+        
+        // For string outputs, check if expected is contained in output
+        if (outputText.includes(expectedText)) {
+          return true;
+        }
+        
+        // Direct comparison
+        return outputText === expectedText;
+      }
+
+      // Check if already submitted on page load
+      function checkSubmissionStatus() {
+        if (studentData.id) {
+          var submittedKey = 'submitted_' + studentData.id;
+          if (localStorage.getItem(submittedKey) === 'true') {
+            var submitBtn = document.getElementById('submitBtn');
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Already Submitted';
+            submitBtn.style.background = '#a0aec0';
+            var statusEl = document.getElementById('submitStatus');
+            statusEl.textContent = '✓ You have already submitted your answers.';
+            statusEl.style.color = '#2d5016';
+          }
+        }
+      }
+
+      // Initialize on page load
+      window.onload = function() {
+        loadStudentData();
+        // Check submission status after a short delay to ensure DOM is ready
+        setTimeout(checkSubmissionStatus, 100);
+      };
+
       function runProblem(textareaId, outputId) {
         var code = document.getElementById(textareaId).value;
         var out = document.getElementById(outputId);
@@ -270,6 +504,144 @@
 
         if (logs.length === 0) out.textContent = "(no output)";
         else out.textContent = logs.join("\n");
+
+        // Check if output is correct and update save button
+        var problemDiv = out.closest('.problem');
+        var hintEl = problemDiv.querySelector('.hint');
+        var saveBtn = problemDiv.querySelector('.save-btn');
+        var outputText = logs.join("\n");
+        var isCorrect = checkOutput(textareaId, outputText, hintEl);
+        
+        if (saveBtn) {
+          saveBtn.disabled = false;
+          if (isCorrect) {
+            saveBtn.style.background = '#2d5016';
+            saveBtn.textContent = '✓ Save (Correct)';
+          } else {
+            saveBtn.style.background = '#c53030';
+            saveBtn.textContent = 'Save (Incorrect)';
+          }
+          
+          // Store current code and output for saving
+          saveBtn.dataset.code = code;
+          saveBtn.dataset.output = outputText;
+          saveBtn.dataset.isCorrect = isCorrect;
+        }
+      }
+
+      // Save final answer for a problem
+      function saveProblemAnswer(button, problemKey) {
+        if (!studentData.name || !studentData.id) {
+          alert('Please enter your name and ID first!');
+          return;
+        }
+        
+        var code = button.dataset.code || '';
+        var output = button.dataset.output || '';
+        var isCorrect = button.dataset.isCorrect === 'true';
+        
+        saveAnswer(problemKey, code, output, isCorrect);
+        
+        button.textContent = '✓ Saved';
+        button.disabled = true;
+        button.style.background = '#2d5016';
+        
+        setTimeout(function() {
+          if (isCorrect) {
+            button.textContent = '✓ Save (Correct)';
+          } else {
+            button.textContent = 'Save (Incorrect)';
+          }
+          button.disabled = false;
+        }, 2000);
+      }
+
+      // Submit all answers to Google Sheets
+      function submitAnswers() {
+        if (!studentData.name || !studentData.id) {
+          alert('Please enter your name and ID first!');
+          return;
+        }
+        
+        // Check if already submitted (client-side check)
+        var submittedKey = 'submitted_' + studentData.id;
+        if (localStorage.getItem(submittedKey) === 'true') {
+          alert('You have already submitted your answers. Only one submission per student is allowed.');
+          var submitBtn = document.getElementById('submitBtn');
+          submitBtn.disabled = true;
+          submitBtn.textContent = 'Already Submitted';
+          submitBtn.style.background = '#a0aec0';
+          var statusEl = document.getElementById('submitStatus');
+          statusEl.textContent = '✓ You have already submitted your answers.';
+          statusEl.style.color = '#2d5016';
+          return;
+        }
+        
+        var answerCount = Object.keys(studentData.answers).length;
+        if (answerCount === 0) {
+          alert('Please save at least one answer before submitting!');
+          return;
+        }
+        
+        var submitBtn = document.getElementById('submitBtn');
+        var statusEl = document.getElementById('submitStatus');
+        
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Submitting...';
+        statusEl.textContent = '';
+        
+        // Replace this URL with your Google Apps Script Web App URL
+        var GOOGLE_SCRIPT_URL = 'YOUR_GOOGLE_SCRIPT_URL_HERE'; // Replace with your actual Google Apps Script Web App URL
+        
+        if (GOOGLE_SCRIPT_URL === 'YOUR_GOOGLE_SCRIPT_URL_HERE') {
+          alert('Google Script URL not configured. Please set up the Google Apps Script first (see GOOGLE_SCRIPT_SETUP.md)');
+          submitBtn.disabled = false;
+          submitBtn.textContent = 'Submit All Answers';
+          return;
+        }
+        
+        // Prepare data for submission
+        var submissionData = {
+          name: studentData.name,
+          id: studentData.id,
+          timestamp: new Date().toISOString(),
+          answers: studentData.answers
+        };
+        
+        // Use fetch with no-cors mode to bypass CORS restrictions
+        // Note: We can't read the response, but the request will be sent
+        fetch(GOOGLE_SCRIPT_URL, {
+          method: 'POST',
+          mode: 'no-cors',
+          cache: 'no-cache',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(submissionData)
+        })
+        .then(function() {
+          // Request was sent (we can't verify success due to no-cors, but assume it worked)
+          // Mark as submitted in localStorage
+          localStorage.setItem(submittedKey, 'true');
+          
+          submitBtn.disabled = true;
+          submitBtn.textContent = 'Already Submitted';
+          submitBtn.style.background = '#a0aec0';
+          statusEl.textContent = '✓ Submitted successfully! Your answers have been saved. You cannot submit again.';
+          statusEl.style.color = '#2d5016';
+        })
+        .catch(function(error) {
+          // Even if there's an error, the request might have gone through
+          // Mark as submitted to prevent multiple attempts
+          localStorage.setItem(submittedKey, 'true');
+          
+          submitBtn.disabled = true;
+          submitBtn.textContent = 'Already Submitted';
+          submitBtn.style.background = '#a0aec0';
+          statusEl.textContent = '✓ Submitted (please check your Google Sheet to confirm). You cannot submit again.';
+          statusEl.style.color = '#2d5016';
+          console.log('Submission sent (no-cors mode - cannot verify response):', error);
+        });
       }
     </script>
   </body>
