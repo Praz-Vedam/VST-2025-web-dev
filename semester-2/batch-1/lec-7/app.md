@@ -15,6 +15,8 @@
     "localtime_epoch": 1769143077,
     "localtime": "2026-01-23 10:07"
   },
+
+  
   "current": {
     "last_updated_epoch": 1769142600,
     "last_updated": "2026-01-23 10:00",
@@ -55,6 +57,28 @@
     "gti": 47.41
   }
 }
+
+
+<!-- function formatUnixTimestamp(unixSeconds) {
+  const date = new Date(unixSeconds * 1000);
+
+  const hours = date.getHours();
+  const minutes = String(date.getMinutes()).padStart(2, "0");
+
+  const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+  const dayName = days[date.getDay()];
+
+  const year = date.getFullYear();
+  const month = String(date.getMonth() + 1).padStart(2, "0");
+  const day = String(date.getDate()).padStart(2, "0");
+
+  <!-- return `${hours}:${minutes} ${dayName} ${year}-${month}-${day}`; -->
+  return 
+  <!-- {day:dayName,
+  time:`${hours}:${minutes}`,
+  date:`${year}-${month}-${day}`};
+} --> -->
+
 
 ## Requirements -
 
