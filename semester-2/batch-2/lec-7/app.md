@@ -67,9 +67,9 @@ https://api.weatherapi.com/v1/current.json?key=c7236d36debb4636a18170654262201&q
 
 # 2.Flow
 
-1.Dummy UI -> with dummy data  [IN-PROGRESS]
+1.Dummy UI -> with dummy data  [DONE]
 ## (start with it...)
 
-2.Need data-> make API request (how ??);//Figured out [TO_DO]
+2.Need data-> make API request (how ??);//Figured out [IN-PROGRESS]
 
 3.Data -> DOM update.[TO-DO]
