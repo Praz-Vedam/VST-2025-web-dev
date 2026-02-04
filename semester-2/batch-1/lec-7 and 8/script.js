@@ -8,7 +8,6 @@ buttonElem.addEventListener("click", () => {
   console.log(location);
   //call the API ->
   fetchWeather(location).then((data) => {
-    // console.log("Data is ...", data);
   //update the DOM
 
  updateDOM(data);

@@ -89,5 +89,6 @@ https://api.weatherapi.com/v1/current.json?key=c7236d36debb4636a18170654262201&q
 
 # Dummy UI 
 1.with dummy data. [DONE]
-2.call API get actual data. [IN-PROGRESS]
-3.DOM update [TO-DO]
+2.call API get actual data. [DONE]
+3.DOM update [DONE]
+4.Hosting and deployment.[TO-DO] using netlify/vercel.
