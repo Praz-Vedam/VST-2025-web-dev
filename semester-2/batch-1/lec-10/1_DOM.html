@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>Dom Manipulation</h2>
+    <div id="root"></div>
+    <script>
+      //select that node
+      const rootEle = document.querySelector("#root");
+      //create element
+      const headElement = document.createElement("h1");
+      headElement.innerText = "hi from h1 element";
+      headElement.style.color = "blue";
+      rootEle.appendChild(headElement);
+    </script>
+  </body>
+</html>
