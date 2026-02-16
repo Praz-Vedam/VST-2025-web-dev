@@ -26,10 +26,37 @@
 
       function CounterApp() {
         //logic
-        return <h1>hi from jsx</h1>;
+
+        let count = 0;
+
+        const handleInc = () => {
+          count++;
+          console.log(count);
+        };
+        const handleDec = () => {
+          count--;
+        };
+
+        return (
+          <div>
+            <h1>Counter App</h1>
+            <h2 id="count">{count}</h2>
+            <div class="btn-Group">
+              <button id="decrement" onClick={handleDec}>
+                -
+              </button>
+              <button id="reset">
+                reset
+              </button>
+              <button id="increment" onClick={handleInc}>
+                +
+              </button>
+            </div>
+          </div>
+        );
       }
 
-      ReactDOM.render(<CounterApp/>, rootEle);
+      ReactDOM.render(<CounterApp />, rootEle);
     </script>
   </body>
 </html>
