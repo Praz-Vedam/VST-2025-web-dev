@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      crossorigin
+      src="https://unpkg.com/react@18/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+    ></script>
+    <style>
+      * {
+        text-align: center;
+        font-size: 1.5rem;
+        margin: 0.5rem;
+      }
+    </style>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="text/babel">
+      //babel transpiler
+      //select that node
+      const rootEle = document.querySelector("#root");
+
+      function CounterApp() {
+        const [count, setCount] = React.useState(0);
+
+        const handleDecrement = () => {
+          setCount(count - 1);
+        };
+
+        const handleIncrement = () => {
+          setCount(count + 1);
+        };
+
+        return (
+          <div class="counter-container">
+            <h1>Counter App</h1>
+            <h2 id="count">{count}</h2>
+            <div class="btn-Group">
+              <button id="decrement" onClick={handleDecrement}>
+                -
+              </button>
+              <button id="reset">reset</button>
+              <button id="increment" onClick={handleIncrement}>
+                +
+              </button>
+            </div>
+          </div>
+        );
+      }
+
+      ReactDOM.render(<CounterApp />, rootEle);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      crossorigin
+      src="https://unpkg.com/react@18/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+    ></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <title>Document</title>
+    <style>
+      body {
+        margin: 0px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+
+      .game {
+        position: relative;
+        width: 320px;
+        height: 480px;
+        border: 3px solid #333;
+        background: #fff;
+        overflow: hidden;
+      }
+
+      .box {
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        background: red;
+        cursor: pointer;
+      }
+
+      .score {
+        position: absolute;
+        top: 5px;
+        left: 10px;
+        font-size: 20px;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <script type="text/babel">
+      //transpiler
+      //select that node
+      const rootEle = document.querySelector("#root");
+      //create element
+      let score = 0;
+
+      function ClickBoxGame() {
+        const handleClick = (event) => {
+        //   alert("");
+          score++;
+          document.querySelector("#score").textContent = `Score : ${score}`;
+          //logic
+        const box = event .target;
+          //update style of redbox
+          box.style.left = Math.random()*(320-50) + "px";
+          box.style.top = Math.random()*(480-50) + "px";
+        };
+
+        return (
+          <div className="game">
+            <div id="score" className="score">
+              Score: 0
+            </div>
+
+            <div
+              onClick={handleClick}
+              className="box"
+              style={{ left: "100px", top: "100px" }}
+            ></div>
+          </div>
+        );
+      }
+      ReactDOM.render(<ClickBoxGame />, rootEle);
+    </script>
+  </body>
+</html>
