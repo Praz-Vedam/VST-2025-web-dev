@@ -1,0 +1,287 @@
+/* Import pixel font */
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+/* Main container */
+.mario-container {
+  background: #6ab04c;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Press Start 2P', cursive;
+  image-rendering: pixelated;
+  padding: 20px;
+}
+
+/* Game window - main container */
+.game-window {
+  background-color: #1a4d8c;
+  padding: 30px;
+  border-radius: 20px;
+  border: 8px solid #f5cd7a;
+  box-shadow: 0 10px 0 #0f3a6b, 0 20px 20px rgba(0,0,0,0.3);
+  max-width: 600px;
+  width: 90%;
+}
+
+/* Game header with clouds */
+.game-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.cloud {
+  font-size: 32px;
+}
+
+.game-title {
+  color: #f5cd7a;
+  font-size: 24px;
+  text-shadow: 4px 4px 0 #b3470c;
+  margin: 0;
+  text-align: center;
+}
+
+/* Game screen - blue background */
+.game-screen {
+  background: #7cc9ff;
+  border-radius: 15px;
+  padding: 30px;
+  border: 5px solid #8b5a2b;
+  position: relative;
+  margin-bottom: 20px;
+  min-height: 350px;
+}
+
+/* Ground with classic Mario stripes */
+.game-ground {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 30px;
+  background: #8b5a2b;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.grass-top {
+  position: absolute;
+  top: -5px;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background: #4caf50;
+}
+
+/* Coin display - HUD style */
+.coin-display {
+  background: #000;
+  padding: 15px 25px;
+  border-radius: 15px;
+  border: 4px solid #f5cd7a;
+  display: inline-block;
+  position: relative;
+  z-index: 2;
+  margin-bottom: 30px;
+}
+
+.coin-label {
+  color: #f5cd7a;
+  font-size: 16px;
+  margin-right: 10px;
+}
+
+.coin-count {
+  color: #fff;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* Character display section */
+.character-display {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.character-container {
+  text-align: center;
+}
+
+.super-mario-sprite {
+  font-size: 64px;
+}
+
+.regular-mario-sprite {
+  font-size: 64px;
+}
+
+.super-mario-label {
+  background: #e74c3c;
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 30px;
+  font-size: 12px;
+  margin-top: 10px;
+  border: 3px solid #fff;
+}
+
+.regular-mario-label {
+  background: #3498db;
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 30px;
+  font-size: 12px;
+  margin-top: 10px;
+  border: 3px solid #fff;
+}
+
+/* Blocks row */
+.blocks-row {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+/* Question block style */
+.question-block {
+  width: 60px;
+  height: 60px;
+  background: #f5cd7a;
+  border: 4px solid #b3470c;
+  cursor: pointer;
+  position: relative;
+  transition: transform 0.1s;
+  box-shadow: 0 6px 0 #b3470c;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.question-mark {
+  font-size: 30px;
+  color: #b3470c;
+}
+
+/* Mushroom block style */
+.mushroom-block {
+  width: 60px;
+  height: 60px;
+  background: #e74c3c;
+  border: 4px solid #fff;
+  cursor: pointer;
+  position: relative;
+  transition: transform 0.1s;
+  box-shadow: 0 6px 0 #962d22;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mushroom-block.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.mushroom-icon {
+  font-size: 30px;
+}
+
+/* Brick block style */
+.reset-block-container {
+  display: flex;
+  justify-content: center;
+}
+
+.brick-block {
+  width: 60px;
+  height: 60px;
+  background: #8b5a2b;
+  border: 4px solid #5d3e1e;
+  cursor: pointer;
+  position: relative;
+  box-shadow: 0 6px 0 #5d3e1e;
+  background-image: repeating-linear-gradient(45deg, #5d3e1e 0px, #5d3e1e 4px, #8b5a2b 4px, #8b5a2b 8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.1s;
+}
+
+.reset-icon {
+  font-size: 24px;
+  color: #fff;
+  text-shadow: 2px 2px 0 #000;
+}
+
+/* Game footer */
+.game-footer {
+  display: flex;
+  justify-content: space-between;
+  color: #f5cd7a;
+  font-size: 12px;
+  margin-top: 10px;
+  text-shadow: 2px 2px 0 #b3470c;
+}
+
+/* Bonus message */
+.bonus-message {
+  background: #f5cd7a;
+  color: #b3470c;
+  padding: 15px;
+  border-radius: 10px;
+  margin-top: 20px;
+  font-size: 12px;
+  text-align: center;
+  border: 4px solid #fff;
+  animation: pulse 1s infinite;
+}
+
+/* Animations */
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+/* Hover effects */
+.question-block:hover, .mushroom-block:hover:not(.disabled), .brick-block:hover {
+  filter: brightness(1.1);
+}
+
+/* Mobile responsiveness */
+@media (max-width: 600px) {
+  .game-window {
+    padding: 15px;
+  }
+  
+  .game-title {
+    font-size: 16px;
+    text-shadow: 2px 2px 0 #b3470c;
+  }
+  
+  .cloud {
+    font-size: 24px;
+  }
+  
+  .coin-display {
+    padding: 10px 15px;
+  }
+  
+  .coin-label {
+    font-size: 12px;
+  }
+  
+  .coin-count {
+    font-size: 18px;
+  }
+  
+  .game-footer {
+    font-size: 8px;
+  }
+}
