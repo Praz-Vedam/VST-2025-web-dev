@@ -11,14 +11,11 @@ const Shopping = () => {
 const handleAddtoCart =()=> {
     //logic
 
-    
 }
-
 
   return (
     <>
       Hello testing
-      {/* UI structure here*/}
       {/* 1 input section */}
       <div className="cart-container">
         <h1>Shopping Cart</h1>
@@ -53,7 +50,9 @@ const handleAddtoCart =()=> {
           <span>Total</span>
           <span>Actions</span>
         </div>
+    {/* ternanry operator. --->.    arr.length == 0 ? <emtryviewComp> : <componenet2> */}
         {/* using loop render cart items dynamically. */}
+
         {
           cartItems.length === 0 ? (
             <div className="empty-cart">you cart is empty</div>
@@ -62,8 +61,9 @@ const handleAddtoCart =()=> {
           )
           //    {cartItems.map(<CartItems/>)} //CART ITEMS ARRAY
         }
-        {/* ternanry operator. --->.    arr.length == 0 ? <emtryviewComp> : <componenet2> */}
       </div>
+
+      
       {/* 3.checkout-footer */}
       <div className="cart-footer">
         <div className="cart-total">Total : 1000/-</div>
