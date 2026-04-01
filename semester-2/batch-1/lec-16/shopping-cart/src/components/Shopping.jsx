@@ -15,7 +15,6 @@ const handleAddtoCart =()=> {
 
   return (
     <>
-      Hello testing
       {/* 1 input section */}
       <div className="cart-container">
         <h1>Shopping Cart</h1>
@@ -55,15 +54,15 @@ const handleAddtoCart =()=> {
 
         {
           cartItems.length === 0 ? (
-            <div className="empty-cart">you cart is empty</div>
+            <div className="empty-cart">your cart is empty</div>
           ) : (
-            <></>
+            <>items</>
           )
           //    {cartItems.map(<CartItems/>)} //CART ITEMS ARRAY
         }
       </div>
 
-      
+
       {/* 3.checkout-footer */}
       <div className="cart-footer">
         <div className="cart-total">Total : 1000/-</div>

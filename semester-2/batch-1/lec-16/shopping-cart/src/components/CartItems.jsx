@@ -11,7 +11,7 @@ const CartItems = () => {
         </div>
         <div className="item-total">$850</div>
         <div className="item-actions">
-          <button>remove</button>
+          <button className="remove-btn">remove</button>
         </div>
       </div>
     </>
