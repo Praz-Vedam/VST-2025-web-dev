@@ -1,6 +1,5 @@
-import React from "react";
-import CartItems from "./CartItems";
 import { useState } from "react";
+import CartItem from "./CartItem";
 
 const Shopping = () => {
   // js logic here
@@ -8,10 +7,40 @@ const Shopping = () => {
   const [ProdPrice, setPrice] = useState(0);
   const [cartItems, setCartItems] = useState([]);
 
-const handleAddtoCart =()=> {
-    //logic
+  const handleAddtoCart = () => {
+    if (!ProdName || !ProdPrice) return; //edge case
 
-}
+    const newItem = {
+      id: Date.now(), //logically alwasy unique
+      name: ProdName,
+      price: ProdPrice,
+      quantity: 1,
+    };
+
+    // cartItems.push(newItem);  wont reflect on screen
+    setCartItems([...cartItems, newItem]); // array state updates.
+    // console.log(cartItems)
+
+    //clean up
+    setProdName("");
+    setPrice(0);
+  };
+
+  const handleUpdate = (id, newQuantity) => {
+    //Update the qn of that item in cartItems
+    if (newQuantity < 1) return;
+
+    const newArr = cartItems.map((item) =>
+      item.id === id ? { ...item, quantity: newQuantity } : item,
+    );
+
+    setCartItems(newArr);
+  };
+
+  const handleRemove = (id) => {
+    //remove that item from the cartItems
+    setCartItems(cartItems.filter((item) => item.id !== id));
+  };
 
   return (
     <>
@@ -49,19 +78,23 @@ const handleAddtoCart =()=> {
           <span>Total</span>
           <span>Actions</span>
         </div>
-    {/* ternanry operator. --->.    arr.length == 0 ? <emtryviewComp> : <componenet2> */}
+        {/* ternanry operator. --->.    arr.length == 0 ? <emtryviewComp> : <componenet2> */}
         {/* using loop render cart items dynamically. */}
 
-        {
-          cartItems.length === 0 ? (
-            <div className="empty-cart">your cart is empty</div>
-          ) : (
-            <>items</>
-          )
-          //    {cartItems.map(<CartItems/>)} //CART ITEMS ARRAY
-        }
+        {cartItems.length === 0 ? (
+          <div className="empty-cart">your cart is empty</div>
+        ) : (
+          <div>
+            {cartItems.map((singleItem) => (
+              <CartItem
+                item={singleItem}
+                OnUpdateQuantity={handleUpdate}
+                onRemove={handleRemove}
+              />
+            ))}
+          </div>
+        )}
       </div>
-
 
       {/* 3.checkout-footer */}
       <div className="cart-footer">
