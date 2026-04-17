@@ -2,20 +2,21 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import { signInWithPopup } from "firebase/auth";
 import { GoogleAuthProvider } from "firebase/auth";
-import { auth } from "../../firebase";
+import { auth } from "../../../firebase";
 
-function Login({isLoggedIn, setIsLoggedIn}) {
-    const navig = useNavigate();
+function Login({ isLoggedIn, setIsLoggedIn }) {
+  const navig = useNavigate();
 
   //return if already true
-if(isLoggedIn){
-      navig("/");
-}
+  if (isLoggedIn) {
+    navig("/");
+  }
 
   const handleLogin = async () => {
     const result = await signInWithPopup(auth, new GoogleAuthProvider());
     console.log(result);
-    setIsLoggedIn(true)
+    
+    setIsLoggedIn(true);
     // alert("logged in");
     navig("/");
   };

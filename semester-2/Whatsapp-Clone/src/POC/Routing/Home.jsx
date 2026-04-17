@@ -1,14 +1,15 @@
 import React from 'react'
 import { signOut } from 'firebase/auth';
-import { auth } from '../../firebase';
+import { auth } from '../../../firebase';
 
 const Home = (props) => {
 const setIsLoggedIn= props.setIsLoggedIn;
 console.log(props)
 
   const handleLogout = async () => {
+    await signOut(auth);
+    
     setIsLoggedIn(false);
-   await signOut(auth);
     
      alert("log out");
  }

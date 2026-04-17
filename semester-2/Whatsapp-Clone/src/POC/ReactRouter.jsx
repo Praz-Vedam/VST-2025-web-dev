@@ -24,7 +24,7 @@ const ReactRouter = () => {
 function ProtectedRoute(props) {
   const isLoggedIn = props.isLoggedIn;
   const setIsLoggedIn = props.setIsLoggedIn;
-  const children = props.children;
+  const children = props.setIsLoggedIn;
 
   if (isLoggedIn) {
     return children;
