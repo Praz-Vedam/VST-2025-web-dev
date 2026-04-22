@@ -1,13 +1,12 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import Login from "./Login";
 import Home from "./Home";
-import PageNotFound from "../../components/NotFound";
-import { Routes, Route } from "react-router-dom";
+import { Navigate, Routes, Route } from "react-router-dom";
 import Chat from "./Chat";
 import ProtectedRoute from "./ProtectedRoute";
 
 function Routing_App() {
-  const [isLoggedIn, setIsLoggedIn] = useState(true);
+  const [isLoggedIn, setisLoggedIn] = useState(true);
 
   return (
     <>
@@ -17,7 +16,7 @@ function Routing_App() {
           path="/"
           element={
             <ProtectedRoute isLoggedIn={isLoggedIn}>
-              <Home setIsLoggedIn={setIsLoggedIn}></Home>
+              <Home setisLoggedIn={setisLoggedIn}></Home>
             </ProtectedRoute>
           }
         >
@@ -25,18 +24,15 @@ function Routing_App() {
             path="/chat/:uniqueId"
             element={
               <ProtectedRoute isLoggedIn={isLoggedIn}>
-                <Chat></Chat>
+                <Chat setisLoggedIn={setisLoggedIn}></Chat>
               </ProtectedRoute>
             }
           ></Route>
         </Route>
         <Route
           path="/login"
-          element={
-            <Login setIsLoggedIn={setIsLoggedIn} isLoggedIn={isLoggedIn} />
-          }
+          element={<Login setisLoggedIn={setisLoggedIn} />}
         ></Route>
-        <Route path="*" element={<PageNotFound />}></Route>
       </Routes>
     </>
   );
