@@ -3,33 +3,33 @@ import { Fingerprint, LogIn } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { signInWithPopup } from "firebase/auth";
 import { GoogleAuthProvider } from "firebase/auth";
-import { auth,db } from "../../firebase";
-import {doc , setDoc}  from 'firebase/firestore'
-
-
+import { auth, db } from "../../firebase";
+import { doc, setDoc } from "firebase/firestore";
+import { useAuth } from "./AuthContext";
 
 function Login(props) {
+  const { setUserData } = useAuth();
+
   const setisLoggedIn = props.setisLoggedIn;
   const navig = useNavigate();
   console.log(navig);
 
-async function createUser(userInfo) {
-const userObj = userInfo.user;
+  async function createUser(userInfo) {
+    const userObj = userInfo.user;
 
-// const displayName =  userObj.displayName
-// const email =  userObj.email
-const {displayName,email,photoURL,uid} = userObj;
-const timeStamp = Date.now();
+    // const displayName =  userObj.displayName
+    // const email =  userObj.email
+    const { displayName, email, photoURL, uid } = userObj;
+    const timeStamp = Date.now();
 
-//writing the doc to firebase
-    await setDoc(doc(db , "users" ,uid), {
-      email : email,
+    //writing the doc to firebase
+    await setDoc(doc(db, "users", uid), {
+      email: email,
       name: displayName,
-      profile_pic : photoURL,
+      profile_pic: photoURL,
       last_seen: timeStamp,
-      status:"I'm busy"
-    })
-
+      status: "I'm busy",
+    });
   }
 
   const handleLogin = async () => {
@@ -39,8 +39,21 @@ const timeStamp = Date.now();
     //write the user data to firestore data
     await createUser(userData);
 
+    //
+    const userObj = userData.user;
+    const { displayName, email, photoURL, uid } = userObj;
+
+    //set data in context
+    setUserData({
+      id: uid,
+      email: email,
+      name: displayName,
+      profile_pic: photoURL,
+      status: "I'm busy", //Todo cleanup unwanted variables.
+    });
+
     setisLoggedIn(true);
-    alert("logged in");
+
     navig("/");
   };
   return (
