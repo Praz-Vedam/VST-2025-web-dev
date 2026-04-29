@@ -50,7 +50,7 @@ const ChatPanel = () => {
       <div className="flex bg-gray-400 p-4 gap-2 justify-between items-center">
         <img
           className="w-10 h-10 rounded-full object-cover"
-          src={userData.profile_pic || "https://placehold.co/400"}
+          src={userData?.profile_pic || "https://placehold.co/400"}
           alt="user profile pic"
         />
         <div className="flex gap-6 items-end">
