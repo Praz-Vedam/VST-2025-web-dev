@@ -1,0 +1,72 @@
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background: #0f1117;
+  color: #e6e6e6;
+}
+
+/* Container */
+.app {
+  max-width: 600px;
+  margin: auto;
+  padding: 30px 20px;
+}
+
+/* Title */
+.title {
+  text-align: center;
+  margin-bottom: 25px;
+  font-weight: 600;
+}
+
+/* Neumorphism Input */
+.neo-input {
+  width: 100%;
+  padding: 12px;
+  border-radius: 12px;
+  border: none;
+  outline: none;
+  margin-bottom: 20px;
+
+  background: #0f1117;
+  color: white;
+
+  box-shadow: 
+    5px 5px 10px #0a0c10,
+    -5px -5px 10px #161a22;
+}
+
+/* List */
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Neumorphism Card */
+.neo-card {
+  padding: 8px;
+  border-radius: 15px;
+  background: #0f1117;
+
+  box-shadow: 
+    6px 6px 12px #0a0c10,
+    -6px -6px 12px #161a22;
+
+  transition: 0.2s ease;
+}
+
+.neo-card:hover {
+  box-shadow: 
+    inset 4px 4px 8px #0a0c10,
+    inset -4px -4px 8px #161a22;
+}
+
+/* Status */
+.done {
+  color: #4caf50;
+}
+
+.pending {
+  color: #ff9800;
+}
